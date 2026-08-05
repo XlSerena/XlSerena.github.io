@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lan Xu — AI Platform & Infrastructure</title>
+    <meta
+      name="description"
+      content="Lan Xu — AI Platform & Infrastructure Engineer. Agents, data platforms, and calm systems."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="top">
+      <a class="mark" href="#top" data-i18n="mark">Lan Xu</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#work" data-i18n="nav_work">Work</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+        <span class="lang-sep" aria-hidden="true">/</span>
+        <button type="button" class="lang-btn" data-lang="zh" aria-pressed="false">中文</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-label="Hero">
+        <div class="hero-visual" aria-hidden="true">
+          <img
+            src="assets/hero.jpg"
+            alt=""
+            width="2272"
+            height="1515"
+            fetchpriority="high"
+          />
+          <div class="hero-veil"></div>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="eyebrow">AI Platform · Infrastructure</p>
+          <h1 data-i18n="name">Lan Xu</h1>
+          <p class="lede" data-i18n="lede">
+            Building production agents, data platforms, and quiet tooling for AI teams.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="#work" data-i18n="cta_work">Selected work</a>
+            <a class="btn ghost" href="mailto:lanxu@umich.edu" data-i18n="cta_mail">Email</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="about">
+        <div class="panel-inner">
+          <p class="section-kicker" data-i18n="about_kicker">About</p>
+          <h2 data-i18n="about_title">Systems that stay composed under load.</h2>
+          <div class="about-grid">
+            <p class="about-body" data-i18n="about_body">
+              I work where language models meet durable infrastructure—routing agents across tools,
+              shaping trustworthy data paths, and making AI cost observable. Currently an AI Platform
+              &amp; Infrastructure Engineer at Noematrix (Flexiv Robotics). Previously a Data Engineer
+              Intern at TikTok. M.S. Information (Big Data Analytics), University of Michigan;
+              B.Eng. ECE, Shanghai Jiao Tong University.
+            </p>
+            <ul class="about-list" data-i18n-list="about_list">
+              <li>LangGraph · agent orchestration · FastAPI</li>
+              <li>Data platforms · streaming · analytics stores</li>
+              <li>Docker · Kubernetes · CI/CD</li>
+              <li>AI developer tooling &amp; governance</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel work" id="work">
+        <div class="panel-inner">
+          <p class="section-kicker" data-i18n="work_kicker">Selected work</p>
+          <h2 data-i18n="work_title">A few things worth showing.</h2>
+
+          <article class="piece">
+            <div class="piece-meta">
+              <span class="piece-index">01</span>
+              <span class="piece-tag" data-i18n="tag_case">Case study</span>
+            </div>
+            <h3>CursorLedger</h3>
+            <p data-i18n="work_cursor">
+              An end-to-end platform for AI developer-tool cost governance: Cursor Admin API ingestion,
+              spend attribution, rankings, drill-downs, and alerting—designed for billing-cycle edge cases
+              and noisy real-world usage. Source remains private (company property); a sanitized public
+              Skill is forthcoming.
+            </p>
+            <p class="piece-note" data-i18n="work_cursor_note">
+              Coming soon — Cursor / Agent Skill (patterns only, no proprietary code).
+            </p>
+          </article>
+
+          <article class="piece">
+            <div class="piece-meta">
+              <span class="piece-index">02</span>
+              <span class="piece-tag" data-i18n="tag_work">Work</span>
+            </div>
+            <h3 data-i18n="work_dm3_agents_title">DM3 Agents Platform</h3>
+            <p data-i18n="work_dm3_agents">
+              Production multi-agent assistant on Lark: router and domain sub-agents with LangGraph /
+              DeepAgents, role-aware authorization, streaming interactive cards, and hardened async
+              workers—thousands of production traces with high LLM reliability.
+            </p>
+          </article>
+
+          <article class="piece">
+            <div class="piece-meta">
+              <span class="piece-index">03</span>
+              <span class="piece-tag" data-i18n="tag_work">Work</span>
+            </div>
+            <h3 data-i18n="work_dm3_stats_title">DM3 Statistics</h3>
+            <p data-i18n="work_dm3_stats">
+              Annotation and quality-control data platform: ODS→DWD→DWS→serving models for capacity,
+              productivity, and human-versus-machine quality across hundreds of thousands of approved tasks.
+            </p>
+          </article>
+
+          <article class="piece">
+            <div class="piece-meta">
+              <span class="piece-index">04</span>
+              <span class="piece-tag" data-i18n="tag_personal">Personal</span>
+            </div>
+            <h3>PhotoLog</h3>
+            <p data-i18n="work_photo">
+              A quiet travel photography site—light on chrome, heavy on place. Design and front-end craft
+              outside the day job.
+            </p>
+            <p>
+              <a class="text-link" href="https://github.com/XlSerena/539_final" rel="noopener noreferrer"
+                >github.com/XlSerena/539_final</a>
+            </p>
+          </article>
+
+          <article class="piece soft">
+            <div class="piece-meta">
+              <span class="piece-index">05</span>
+              <span class="piece-tag" data-i18n="tag_soon">Soon</span>
+            </div>
+            <h3 data-i18n="work_skills_title">Skills</h3>
+            <p data-i18n="work_skills">
+              Public Cursor / Agent Skills will land here—reusable workflows and checklists, carefully
+              stripped of internal systems and credentials.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel contact" id="contact">
+        <div class="panel-inner contact-inner">
+          <p class="section-kicker" data-i18n="contact_kicker">Contact</p>
+          <h2 data-i18n="contact_title">Say hello.</h2>
+          <p class="contact-lede" data-i18n="contact_lede">
+            Open to conversations about AI platforms, agents, and data infrastructure.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <a href="mailto:lanxu@umich.edu">lanxu@umich.edu</a>
+            </li>
+            <li>
+              <a href="https://github.com/XlSerena" rel="noopener noreferrer">github.com/XlSerena</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p data-i18n="footer">Quiet systems. Clear signals.</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
