@@ -64,7 +64,7 @@ const copy = {
     side_si659_time: "Winter 2025",
     side_si659_title: "XR Journalism Hazard Drill",
     side_si659_blurb:
-      "An embodied field exercise for journalists in a disaster zone—map, route, and reporting setup on Quest Pro.",
+      "A class-wide teamwork XR drill for journalists in a disaster zone—map, route, and reporting setup on Quest Pro.",
     side_si659_role: "Dev · Unity + Meta SDK · spatial interaction",
     side_game_time: "Spring 2024",
     side_game_title: "The Time Gambit",
@@ -135,7 +135,7 @@ const copy = {
     dnd_modal_close: "关闭",
     side_si659_time: "2025 冬",
     side_si659_title: "XR记者危险演习",
-    side_si659_blurb: "记者的具身现场演习：在灾区读地图、选路线、布置报道——Quest Pro 上完成。",
+    side_si659_blurb: "全班协作的 XR 记者演习：在灾区读地图、选路线、布置报道——Quest Pro 上完成。",
     side_si659_role: "开发 · Unity + Meta SDK · 空间交互",
     side_game_time: "2024 春",
     side_game_title: "The Time Gambit",
