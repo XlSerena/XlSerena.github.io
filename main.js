@@ -52,8 +52,9 @@ const copy = {
     side_feastory_role: "Lead contributor · AI dialogue & game systems",
     side_dnd_time: "Spring 2026",
     side_dnd_title: "D&D 5e Rules Assistant",
-    side_dnd_blurb: "RAG rules bot with Player / DM framing, source evidence, and a FastAPI web UI.",
-    side_dnd_role: "Lead · retrieval pipeline & product UI",
+    side_dnd_blurb:
+      "Live RAG demo on AWS EC2: Player / DM framing, source evidence, FastAPI + Qdrant.",
+    side_dnd_role: "Lead · retrieval pipeline, UI & EC2 deploy",
     side_si659_time: "Winter 2025",
     side_si659_title: "XR Journalism Hazard Drill",
     side_si659_blurb:
@@ -118,8 +119,8 @@ const copy = {
     side_feastory_role: "主要贡献者 · AI 对话与游戏系统",
     side_dnd_time: "2026 春",
     side_dnd_title: "D&D 5e 规则助手",
-    side_dnd_blurb: "面向玩家 / DM 的 RAG 规则问答，带回溯证据与 FastAPI Web UI。",
-    side_dnd_role: "主导 · 检索链路与产品界面",
+    side_dnd_blurb: "AWS EC2 上的在线 RAG demo：玩家 / DM 视角、证据回溯、FastAPI + Qdrant。",
+    side_dnd_role: "主导 · 检索链路、界面与 EC2 部署",
     side_si659_time: "2025 冬",
     side_si659_title: "XR记者危险演习",
     side_si659_blurb: "XR 记者演习：在灾区用地图规划路线，并完成报道设备布置。",
