@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <link rel="stylesheet" href="styles.css?v=20260805-9" />
+    <link rel="stylesheet" href="styles.css?v=20260805-10" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -161,20 +161,22 @@
 
           <div class="side-rail" role="list">
             <a
-              class="side-card"
+              class="side-card has-video"
               role="listitem"
-              href="https://github.com/Carolzhangzz/Feastory"
+              href="https://drive.google.com/file/d/1O9mf6RQ4a2M1pY3BiEwU9GkQ-XFlPhaw/view?usp=drive_link"
               rel="noopener noreferrer"
               target="_blank"
             >
               <div class="side-media">
                 <img src="assets/side/feastory.jpg" alt="" width="1200" height="674" loading="lazy" />
+                <span class="side-play" aria-hidden="true">▶</span>
               </div>
               <div class="side-body">
                 <p class="side-time" data-i18n="side_feastory_time">Spring 2026</p>
                 <h3 data-i18n="side_feastory_title">Feastory</h3>
+                <p class="side-sub" data-i18n="side_feastory_sub">Food journal RPG</p>
                 <p class="side-blurb" data-i18n="side_feastory_blurb">
-                  Multi-agent food RPG: meal logging, NPC dialogue, and a final eating-pattern report.
+                  Multi-agent meal logging, NPC dialogue, and a final eating-pattern report.
                 </p>
                 <p class="side-role" data-i18n="side_feastory_role">Lead contributor · AI dialogue &amp; game systems</p>
               </div>
@@ -182,10 +184,13 @@
 
             <a
               class="side-card"
+              id="dnd-demo-card"
               role="listitem"
               href="http://54.163.206.95:8000/"
               rel="noopener noreferrer"
               target="_blank"
+              data-demo-url="http://54.163.206.95:8000/"
+              data-demo-expires="2026-10-19"
             >
               <div class="side-media">
                 <img src="assets/side/dnd.jpg" alt="" width="1400" height="875" loading="lazy" />
@@ -196,6 +201,7 @@
                 <p class="side-blurb" data-i18n="side_dnd_blurb">
                   Live RAG demo on AWS EC2: Player / DM framing, source evidence, FastAPI + Qdrant.
                 </p>
+                <p class="side-expiry" id="dnd-days-remaining" data-i18n-expiry></p>
                 <p class="side-role" data-i18n="side_dnd_role">Lead · retrieval pipeline, UI &amp; EC2 deploy</p>
               </div>
             </a>
@@ -203,7 +209,7 @@
             <a
               class="side-card has-video"
               role="listitem"
-              href="https://drive.google.com/file/d/1qXUwxNA9hWt0Riy41oAXRvXQih21JyOJ/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1M8nI3yRYNqlc2qVdR8BdSshLv6wXXjTY/view?usp=drive_link"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -244,6 +250,17 @@
         </div>
       </section>
 
+      <div class="modal" id="dnd-modal" hidden>
+        <div class="modal-backdrop" data-modal-close></div>
+        <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="dnd-modal-title">
+          <h3 id="dnd-modal-title" data-i18n="dnd_modal_title">Demo unavailable</h3>
+          <p data-i18n="dnd_modal_body">
+            The AWS EC2 free-tier demo for D&amp;D 5e Rules Assistant ended on October 19, 2026.
+          </p>
+          <button type="button" class="modal-close" data-modal-close data-i18n="dnd_modal_close">Close</button>
+        </div>
+      </div>
+
       <section class="panel contact" id="contact">
         <div class="panel-inner contact-inner">
           <p class="section-kicker" data-i18n="contact_kicker">Contact</p>
@@ -267,6 +284,6 @@
       <p data-i18n="footer">Quiet systems. Clear signals.</p>
     </footer>
 
-    <script src="main.js?v=20260805-9"></script>
+    <script src="main.js?v=20260805-10"></script>
   </body>
 </html>

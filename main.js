@@ -47,14 +47,21 @@ const copy = {
       "Compact snapshots from games, agents, and interactive prototypes—kept light so the main work stays primary.",
     side_feastory_time: "Spring 2026",
     side_feastory_title: "Feastory",
+    side_feastory_sub: "Food journal RPG",
     side_feastory_blurb:
-      "Multi-agent food RPG: meal logging, NPC dialogue, and a final eating-pattern report.",
+      "Multi-agent meal logging, NPC dialogue, and a final eating-pattern report.",
     side_feastory_role: "Lead contributor · AI dialogue & game systems",
     side_dnd_time: "Spring 2026",
     side_dnd_title: "D&D 5e Rules Assistant",
     side_dnd_blurb:
       "Live RAG demo on AWS EC2: Player / DM framing, source evidence, FastAPI + Qdrant.",
     side_dnd_role: "Lead · retrieval pipeline, UI & EC2 deploy",
+    side_dnd_days: "Days remaining: {days} (October 19, 2026)",
+    side_dnd_expired_label: "Ended October 19, 2026",
+    dnd_modal_title: "Demo unavailable",
+    dnd_modal_body:
+      "The AWS EC2 free-tier demo for D&D 5e Rules Assistant ended on October 19, 2026.",
+    dnd_modal_close: "Close",
     side_si659_time: "Winter 2025",
     side_si659_title: "XR Journalism Hazard Drill",
     side_si659_blurb:
@@ -115,12 +122,18 @@ const copy = {
     side_lede: "游戏、智能体与交互原型的轻量快照——占位克制，不抢主线作品。",
     side_feastory_time: "2026 春",
     side_feastory_title: "Feastory",
-    side_feastory_blurb: "多智能体饮食 RPG：记录餐食、与 NPC 对话，并生成饮食模式终报。",
+    side_feastory_sub: "饮食手账 RPG",
+    side_feastory_blurb: "多智能体记录餐食、与 NPC 对话，并生成饮食模式终报。",
     side_feastory_role: "主要贡献者 · AI 对话与游戏系统",
     side_dnd_time: "2026 春",
     side_dnd_title: "D&D 5e 规则助手",
     side_dnd_blurb: "AWS EC2 上的在线 RAG demo：玩家 / DM 视角、证据回溯、FastAPI + Qdrant。",
     side_dnd_role: "主导 · 检索链路、界面与 EC2 部署",
+    side_dnd_days: "剩余 {days} 天（至 2026 年 10 月 19 日）",
+    side_dnd_expired_label: "已于 2026 年 10 月 19 日到期",
+    dnd_modal_title: "Demo 已下线",
+    dnd_modal_body: "D&D 5e 规则助手的 AWS EC2 免费额度 demo 已于 2026 年 10 月 19 日到期。",
+    dnd_modal_close: "关闭",
     side_si659_time: "2025 冬",
     side_si659_title: "XR记者危险演习",
     side_si659_blurb: "XR 记者演习：在灾区用地图规划路线，并完成报道设备布置。",
@@ -136,7 +149,35 @@ const copy = {
   },
 };
 
+const DND_EXPIRES_AT = new Date("2026-10-19T23:59:59");
+let currentLang = "en";
+
+function daysUntilDndExpiry() {
+  const now = new Date();
+  const ms = DND_EXPIRES_AT.getTime() - now.getTime();
+  return Math.ceil(ms / (1000 * 60 * 60 * 24));
+}
+
+function isDndExpired() {
+  return daysUntilDndExpiry() <= 0;
+}
+
+function updateDndExpiryLabel() {
+  const el = document.getElementById("dnd-days-remaining");
+  if (!el) return;
+  const dict = copy[currentLang] || copy.en;
+  const days = daysUntilDndExpiry();
+  if (days <= 0) {
+    el.textContent = dict.side_dnd_expired_label;
+    el.classList.add("is-expired");
+  } else {
+    el.textContent = dict.side_dnd_days.replace("{days}", String(days));
+    el.classList.remove("is-expired");
+  }
+}
+
 function applyLang(lang) {
+  currentLang = lang;
   const dict = copy[lang] || copy.en;
   document.documentElement.lang = lang === "zh" ? "zh-Hans" : "en";
 
@@ -157,6 +198,8 @@ function applyLang(lang) {
     btn.classList.toggle("is-active", active);
     btn.setAttribute("aria-pressed", active ? "true" : "false");
   });
+
+  updateDndExpiryLabel();
 
   try {
     localStorage.setItem("lx-lang", lang);
@@ -202,5 +245,44 @@ function initReveal() {
   pieces.forEach((p) => io.observe(p));
 }
 
+function openDndModal() {
+  const modal = document.getElementById("dnd-modal");
+  if (!modal) return;
+  modal.hidden = false;
+  document.body.classList.add("modal-open");
+}
+
+function closeDndModal() {
+  const modal = document.getElementById("dnd-modal");
+  if (!modal) return;
+  modal.hidden = true;
+  document.body.classList.remove("modal-open");
+}
+
+function initDndDemo() {
+  const card = document.getElementById("dnd-demo-card");
+  const modal = document.getElementById("dnd-modal");
+  if (!card) return;
+
+  updateDndExpiryLabel();
+
+  card.addEventListener("click", (event) => {
+    if (!isDndExpired()) return;
+    event.preventDefault();
+    openDndModal();
+  });
+
+  if (modal) {
+    modal.querySelectorAll("[data-modal-close]").forEach((el) => {
+      el.addEventListener("click", closeDndModal);
+    });
+  }
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeDndModal();
+  });
+}
+
 initLang();
 initReveal();
+initDndDemo();
