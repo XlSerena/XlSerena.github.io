@@ -37,8 +37,6 @@ const copy = {
     work_dm3_stats_title: "DM3 Statistics",
     work_dm3_stats:
       "Annotation and quality-control data platform: ODS→DWD→DWS→serving models for capacity, productivity, and human-versus-machine quality across hundreds of thousands of approved tasks.",
-    work_photo:
-      "A quiet travel photography site—light on chrome, heavy on place. Design and front-end craft outside the day job.",
     work_skills_title: "Skills",
     work_skills:
       "Public Cursor / Agent Skills will land here—reusable workflows and checklists, carefully stripped of internal systems and credentials.",
@@ -84,7 +82,6 @@ const copy = {
     work_dm3_stats_title: "DM3 统计平台",
     work_dm3_stats:
       "标注与质检数据平台：ODS→DWD→DWS→服务层模型，覆盖产能、人效，以及人机质量对比，支撑数十万级已通过任务的分析。",
-    work_photo: "安静的旅行摄影站——界面克制，把分量留给地方本身。工作之外的设计与前端练习。",
     work_skills_title: "Skills",
     work_skills: "公开的 Cursor / Agent Skills 会放在这里——可复用的流程与清单，并仔细剥离内部系统与凭证。",
     contact_kicker: "联络",
