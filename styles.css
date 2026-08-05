@@ -201,6 +201,34 @@ a {
   margin-top: 1.75rem;
 }
 
+.hero-annotation {
+  position: absolute;
+  z-index: 1;
+  top: clamp(5.5rem, 12vh, 8rem);
+  right: var(--space);
+  max-width: 29rem;
+  text-align: right;
+  color: #f4f1ea;
+  animation: rise 1.35s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-thought {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(0.85rem, 1.25vw, 1rem);
+  line-height: 1.65;
+  text-wrap: balance;
+  color: rgba(244, 241, 234, 0.82);
+}
+
+.hero-caption {
+  margin: 0.7rem 0 0;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: rgba(244, 241, 234, 0.58);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -459,6 +487,14 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .hero-annotation {
+    top: 5.75rem;
+    left: var(--space);
+    right: var(--space);
+    max-width: 24rem;
+    text-align: left;
+  }
+
   .work .piece {
     grid-template-columns: 1fr;
   }
@@ -482,6 +518,7 @@ a {
 
   .hero-visual img,
   .hero-copy,
+  .hero-annotation,
   .work .piece {
     animation: none !important;
     transition: none !important;
