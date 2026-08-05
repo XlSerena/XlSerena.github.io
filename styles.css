@@ -209,7 +209,8 @@ a {
   max-width: 29rem;
   text-align: right;
   color: #f4f1ea;
-  animation: rise 1.35s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+  opacity: 1;
+  text-shadow: 0 1px 18px rgba(0, 0, 0, 0.45);
 }
 
 .hero-thought {
