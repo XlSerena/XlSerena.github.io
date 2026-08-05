@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260805-3" />
+    <link rel="stylesheet" href="styles.css?v=20260805-4" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -24,6 +24,7 @@
       <nav class="nav" aria-label="Primary">
         <a href="#about" data-i18n="nav_about">About</a>
         <a href="#work" data-i18n="nav_work">Work</a>
+        <a href="#side" data-i18n="nav_side">Side notes</a>
         <a href="#contact" data-i18n="nav_contact">Contact</a>
       </nav>
       <div class="lang" role="group" aria-label="Language">
@@ -149,6 +150,94 @@
         </div>
       </section>
 
+      <section class="panel side" id="side">
+        <div class="panel-inner">
+          <p class="section-kicker" data-i18n="side_kicker">Side notes</p>
+          <h2 data-i18n="side_title">Smaller experiments worth keeping.</h2>
+          <p class="side-lede" data-i18n="side_lede">
+            Compact snapshots from games, agents, and interactive prototypes—kept light so the main work stays primary.
+          </p>
+
+          <div class="side-rail" role="list">
+            <a
+              class="side-card"
+              role="listitem"
+              href="https://github.com/Carolzhangzz/Feastory"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div class="side-media">
+                <img src="assets/side/feastory.jpg" alt="" width="1200" height="674" loading="lazy" />
+              </div>
+              <div class="side-body">
+                <p class="side-time" data-i18n="side_feastory_time">Winter 2025</p>
+                <h3 data-i18n="side_feastory_title">Feastory</h3>
+                <p class="side-blurb" data-i18n="side_feastory_blurb">
+                  Multi-agent food RPG: meal logging, NPC dialogue, and a final eating-pattern report.
+                </p>
+                <p class="side-role" data-i18n="side_feastory_role">Lead contributor · AI dialogue &amp; game systems</p>
+              </div>
+            </a>
+
+            <a
+              class="side-card"
+              role="listitem"
+              href="https://github.com/yfsongum/dnd5e_interactive_bot"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div class="side-media">
+                <img src="assets/side/dnd.jpg" alt="" width="1400" height="875" loading="lazy" />
+              </div>
+              <div class="side-body">
+                <p class="side-time" data-i18n="side_dnd_time">2026</p>
+                <h3 data-i18n="side_dnd_title">D&amp;D 5e Rules Assistant</h3>
+                <p class="side-blurb" data-i18n="side_dnd_blurb">
+                  RAG rules bot with Player / DM framing, source evidence, and a FastAPI web UI.
+                </p>
+                <p class="side-role" data-i18n="side_dnd_role">Lead · retrieval pipeline &amp; product UI</p>
+              </div>
+            </a>
+
+            <div class="side-card is-private" role="listitem">
+              <div class="side-media">
+                <img src="assets/side/game.jpg" alt="" width="1400" height="787" loading="lazy" />
+                <span class="side-badge" data-i18n="side_private">Private</span>
+              </div>
+              <div class="side-body">
+                <p class="side-time" data-i18n="side_game_time">Spring 2024</p>
+                <h3 data-i18n="side_game_title">DH2650 Game Design</h3>
+                <p class="side-blurb" data-i18n="side_game_blurb">
+                  Unity puzzle game exploring past / present dual spaces—source remains private.
+                </p>
+                <p class="side-role" data-i18n="side_game_role">Collaborator · systems &amp; level craft</p>
+              </div>
+            </div>
+
+            <a
+              class="side-card has-video"
+              role="listitem"
+              href="https://drive.google.com/file/d/1qXUwxNA9hWt0Riy41oAXRvXQih21JyOJ/view?usp=drive_link"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div class="side-media">
+                <img src="assets/side/si659.jpg" alt="" width="1400" height="933" loading="lazy" />
+                <span class="side-play" aria-hidden="true">▶</span>
+              </div>
+              <div class="side-body">
+                <p class="side-time" data-i18n="side_si659_time">Winter 2025</p>
+                <h3 data-i18n="side_si659_title">SI 659 Final</h3>
+                <p class="side-blurb" data-i18n="side_si659_blurb">
+                  Interactive XR prototype—watch the demo video for the built interactions.
+                </p>
+                <p class="side-role" data-i18n="side_si659_role">Team project · prototype &amp; interactions</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section class="panel contact" id="contact">
         <div class="panel-inner contact-inner">
           <p class="section-kicker" data-i18n="contact_kicker">Contact</p>
@@ -172,6 +261,6 @@
       <p data-i18n="footer">Quiet systems. Clear signals.</p>
     </footer>
 
-    <script src="main.js?v=20260805-3"></script>
+    <script src="main.js?v=20260805-4"></script>
   </body>
 </html>

@@ -3,6 +3,7 @@ const copy = {
     mark: "Lan Xu",
     nav_about: "About",
     nav_work: "Work",
+    nav_side: "Side notes",
     nav_contact: "Contact",
     eyebrow: "AI Platform · Infrastructure",
     name: "Lan Xu",
@@ -40,6 +41,28 @@ const copy = {
     work_skills_title: "Skills",
     work_skills:
       "Public Cursor / Agent Skills will land here—reusable workflows and checklists, carefully stripped of internal systems and credentials.",
+    side_kicker: "Side notes",
+    side_title: "Smaller experiments worth keeping.",
+    side_lede:
+      "Compact snapshots from games, agents, and interactive prototypes—kept light so the main work stays primary.",
+    side_private: "Private",
+    side_feastory_time: "Winter 2025",
+    side_feastory_title: "Feastory",
+    side_feastory_blurb:
+      "Multi-agent food RPG: meal logging, NPC dialogue, and a final eating-pattern report.",
+    side_feastory_role: "Lead contributor · AI dialogue & game systems",
+    side_dnd_time: "2026",
+    side_dnd_title: "D&D 5e Rules Assistant",
+    side_dnd_blurb: "RAG rules bot with Player / DM framing, source evidence, and a FastAPI web UI.",
+    side_dnd_role: "Lead · retrieval pipeline & product UI",
+    side_game_time: "Spring 2024",
+    side_game_title: "DH2650 Game Design",
+    side_game_blurb: "Unity puzzle game exploring past / present dual spaces—source remains private.",
+    side_game_role: "Collaborator · systems & level craft",
+    side_si659_time: "Winter 2025",
+    side_si659_title: "SI 659 Final",
+    side_si659_blurb: "Interactive XR prototype—watch the demo video for the built interactions.",
+    side_si659_role: "Team project · prototype & interactions",
     contact_kicker: "Contact",
     contact_title: "Say hello.",
     contact_lede: "Open to conversations about AI platforms, agents, and data infrastructure.",
@@ -49,6 +72,7 @@ const copy = {
     mark: "Lan Xu",
     nav_about: "关于",
     nav_work: "作品",
+    nav_side: "旁支",
     nav_contact: "联络",
     eyebrow: "AI 平台 · 基础设施",
     name: "Lan Xu",
@@ -84,6 +108,26 @@ const copy = {
       "标注与质检数据平台：ODS→DWD→DWS→服务层模型，覆盖产能、人效，以及人机质量对比，支撑数十万级已通过任务的分析。",
     work_skills_title: "Skills",
     work_skills: "公开的 Cursor / Agent Skills 会放在这里——可复用的流程与清单，并仔细剥离内部系统与凭证。",
+    side_kicker: "旁支",
+    side_title: "值得留下的小实验。",
+    side_lede: "游戏、智能体与交互原型的轻量快照——占位克制，不抢主线作品。",
+    side_private: "私有",
+    side_feastory_time: "2025 冬",
+    side_feastory_title: "Feastory",
+    side_feastory_blurb: "多智能体饮食 RPG：记录餐食、与 NPC 对话，并生成饮食模式终报。",
+    side_feastory_role: "主要贡献者 · AI 对话与游戏系统",
+    side_dnd_time: "2026",
+    side_dnd_title: "D&D 5e 规则助手",
+    side_dnd_blurb: "面向玩家 / DM 的 RAG 规则问答，带回溯证据与 FastAPI Web UI。",
+    side_dnd_role: "主导 · 检索链路与产品界面",
+    side_game_time: "2024 春",
+    side_game_title: "DH2650 游戏设计",
+    side_game_blurb: "Unity 解谜：在过去 / 现在双空间中穿行——源码保持私有。",
+    side_game_role: "协作者 · 系统与关卡",
+    side_si659_time: "2025 冬",
+    side_si659_title: "SI 659 Final",
+    side_si659_blurb: "交互式 XR 原型——点击查看演示视频中的关键交互。",
+    side_si659_role: "团队项目 · 原型与交互实现",
     contact_kicker: "联络",
     contact_title: "保持联络。",
     contact_lede: "欢迎交流 AI 平台、智能体与数据基础设施。",
@@ -138,7 +182,7 @@ function initLang() {
 }
 
 function initReveal() {
-  const pieces = document.querySelectorAll(".work .piece");
+  const pieces = document.querySelectorAll(".work .piece, .side-card");
   if (!("IntersectionObserver" in window)) {
     pieces.forEach((p) => p.classList.add("is-in"));
     return;
