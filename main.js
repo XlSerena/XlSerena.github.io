@@ -56,8 +56,8 @@ const copy = {
     side_dnd_blurb:
       "Live RAG demo on AWS EC2: Player / DM framing, source evidence, FastAPI + Qdrant.",
     side_dnd_role: "Lead · retrieval pipeline, UI & EC2 deploy",
-    side_dnd_days: "Days remaining: {days} (October 19, 2026)",
-    side_dnd_expired_label: "Ended October 19, 2026",
+    side_dnd_days: "Web demo available until October 19, 2026",
+    side_dnd_expired_label: "Web demo ended October 19, 2026",
     dnd_modal_title: "Demo unavailable",
     dnd_modal_body:
       "The AWS EC2 free-tier demo for D&D 5e Rules Assistant ended on October 19, 2026.",
@@ -129,8 +129,8 @@ const copy = {
     side_dnd_title: "D&D 5e 规则助手",
     side_dnd_blurb: "AWS EC2 上的在线 RAG demo：玩家 / DM 视角、证据回溯、FastAPI + Qdrant。",
     side_dnd_role: "主导 · 检索链路、界面与 EC2 部署",
-    side_dnd_days: "剩余 {days} 天（至 2026 年 10 月 19 日）",
-    side_dnd_expired_label: "已于 2026 年 10 月 19 日到期",
+    side_dnd_days: "网页服务有效至 2026 年 10 月 19 日",
+    side_dnd_expired_label: "网页服务已于 2026 年 10 月 19 日到期",
     dnd_modal_title: "Demo 已下线",
     dnd_modal_body: "D&D 5e 规则助手的 AWS EC2 免费额度 demo 已于 2026 年 10 月 19 日到期。",
     dnd_modal_close: "关闭",
@@ -166,12 +166,11 @@ function updateDndExpiryLabel() {
   const el = document.getElementById("dnd-days-remaining");
   if (!el) return;
   const dict = copy[currentLang] || copy.en;
-  const days = daysUntilDndExpiry();
-  if (days <= 0) {
+  if (isDndExpired()) {
     el.textContent = dict.side_dnd_expired_label;
     el.classList.add("is-expired");
   } else {
-    el.textContent = dict.side_dnd_days.replace("{days}", String(days));
+    el.textContent = dict.side_dnd_days;
     el.classList.remove("is-expired");
   }
 }
