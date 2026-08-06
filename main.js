@@ -3,6 +3,7 @@ const copy = {
     mark: "Lan Xu",
     nav_about: "About",
     nav_work: "Work",
+    nav_skills: "Skills",
     nav_side: "Side notes",
     nav_contact: "Contact",
     eyebrow: "AI Platform · Infrastructure",
@@ -45,15 +46,24 @@ const copy = {
       "Live for four user types: 4,000+ production traces in 30 days, peaking at 327/day, with no failed LLM calls in the measured window.",
     work_costlens_sub: "Vibe-coding AI spend, one ledger across every entry point.",
     work_costlens_blurb:
-      "Independently built unified spend governance across AI entry points for 8 groups / 240 people: ingestion, attribution, rankings, and Lark alerts—including trustworthy daily series from cycle-total-only vendor APIs.",
+      "Independently built unified spend governance across AI entry points for 8 groups / 240 people: ingestion, attribution, rankings, and Lark alerts—including trustworthy daily series from cycle-total-only vendor APIs. Hard part: reconstructing day-level series people could trust when vendors only exposed billing-cycle totals—without double-counting alerts across entry points.",
     work_wide_title: "TikTok · Risk Table Optimization at Scale",
     work_wide_sub: "Data Engineer Intern · scale proof on the offline risk chain.",
     work_wide_blurb:
-      "Rebuilt 70–90 TB / ~12B-row payment decision wide tables that ~80% of risk jobs depended on: skew fixes, common-layer sink, and 62-day hot/cold split. Cut runtime ~6h→2h and ~4h→1.5h in the heaviest rooms; hot-only reads ~16→10 min (~37%).",
+      "Rebuilt 70–90 TB / ~12B-row payment decision wide tables that ~80% of risk jobs depended on: skew fixes, common-layer sink, and 62-day hot/cold split. Cut runtime ~6h→2h and ~4h→1.5h in the heaviest rooms; hot-only reads ~16→10 min (~37%). Hard part: landing a common-layer + hot/cold redesign downstream jobs could adopt without a consumer rewrite wave.",
     work_rt_title: "TikTok · Near-Real-Time Risk Sensing",
     work_rt_sub: "Data Engineer Intern · scale proof with Flink under live abuse.",
     work_rt_blurb:
-      "Built Flink real-time risk datasets with offline compensation and lag/failover/checkpoint monitors, moving stolen-card, ATO, and collusion sensing from ~h+6 hour tables to near real time.",
+      "Built Flink real-time risk datasets with offline compensation and lag/failover/checkpoint monitors, moving stolen-card, ATO, and collusion sensing from ~h+6 hour tables to near real time. Hard part: keeping jobs honest under lag and failover so near-real-time sensing stayed trustworthy when streams hiccuped.",
+    skills_kicker: "Public skills",
+    skills_title: "Agent skills you can load.",
+    skills_lede: "Method and checklists distilled from production work—no company code.",
+    skill_tools_title: "agent-tool-safety",
+    skill_tools_blurb:
+      "Design and review production tool-calling under roles, concurrency, and dirty upstream data—dual-layer auth, idempotency, and summary vs detailed delivery.",
+    skill_spend_title: "ai-spend-governance",
+    skill_spend_blurb:
+      "Build a trustworthy AI / vibe-coding spend ledger across vendor entry points—attribution, daily series from cycle totals, rankings, and deduplicated alerts.",
     side_kicker: "Side notes",
     side_title: "Smaller experiments worth keeping.",
     side_lede: "Games, XR, and playful systems at the edge of design and tech.",
@@ -93,6 +103,7 @@ const copy = {
     mark: "Lan Xu",
     nav_about: "关于",
     nav_work: "作品",
+    nav_skills: "Skills",
     nav_side: "旁支",
     nav_contact: "联络",
     eyebrow: "AI 平台 · 基础设施",
@@ -134,15 +145,24 @@ const copy = {
       "上线服务四类用户：30 天内 4,000+ 条生产 trace，峰值 327 条/天；观测窗口内无失败 LLM 调用。",
     work_costlens_sub: "Vibe coding 的 AI 花销 · 跨入口统一台账。",
     work_costlens_blurb:
-      "独立搭建跨 AI 入口的统一成本治理，覆盖 8 组 / 240 人：同步、归因、排名与飞书告警，并在厂商仅提供账期累计时还原可信日序列。",
+      "独立搭建跨 AI 入口的统一成本治理，覆盖 8 组 / 240 人：同步、归因、排名与飞书告警，并在厂商仅提供账期累计时还原可信日序列。难点：在只有账期累计的 API 上还原可信日序列，同时避免跨入口告警重复计数。",
     work_wide_title: "TikTok · 大规模风控宽表优化",
     work_wide_sub: "数据工程实习 · 用规模证明离线链路扛得住。",
     work_wide_blurb:
-      "改造约八成风控任务依赖的支付决策宽表（70–90 TB / ~120 亿行）：倾斜治理、公共层下沉、62 天冷热分离。最重机房约 6h→2h、4h→1.5h；热分区取数约 16→10 分钟（~37%）。",
+      "改造约八成风控任务依赖的支付决策宽表（70–90 TB / ~120 亿行）：倾斜治理、公共层下沉、62 天冷热分离。最重机房约 6h→2h、4h→1.5h；热分区取数约 16→10 分钟（~37%）。难点：让公共层 + 冷热分层能被下游直接接住，而不掀起一轮消费任务重写。",
     work_rt_title: "TikTok · 近实时风险感知",
     work_rt_sub: "数据工程实习 · 用 Flink 证明实时对抗扛得住。",
     work_rt_blurb:
-      "搭建 Flink 实时风险数据集，配合离线补偿与 lag/failover/checkpoint 监控，将盗卡、ATO、勾结等感知从小时表约 h+6 做到近实时。",
+      "搭建 Flink 实时风险数据集，配合离线补偿与 lag/failover/checkpoint 监控，将盗卡、ATO、勾结等感知从小时表约 h+6 做到近实时。难点：在 lag/failover 下仍保持任务可信，让近实时感知在流量抖动时站得住。",
+    skills_kicker: "公开 Skills",
+    skills_title: "可直接加载的 Agent Skills。",
+    skills_lede: "从生产实践提炼的方法与清单——不含公司代码。",
+    skill_tools_title: "agent-tool-safety",
+    skill_tools_blurb:
+      "设计和评审生产级 tool-calling：角色鉴权、并发幂等、脏上游校验，以及摘要与明细投递的分级输出。",
+    skill_spend_title: "ai-spend-governance",
+    skill_spend_blurb:
+      "搭建可信的 AI / vibe-coding 花销台账：跨入口归因、从账期累计还原日序列、排名与去重告警。",
     side_kicker: "旁支",
     side_title: "值得留下的小实验。",
     side_lede: "游戏、XR 与可玩系统，落在设计与科技的交界。",
@@ -259,7 +279,7 @@ function initLang() {
 }
 
 function initReveal() {
-  const pieces = document.querySelectorAll(".work .piece, .side-card");
+  const pieces = document.querySelectorAll(".work .piece, .skill-item, .side-card");
   if (!("IntersectionObserver" in window)) {
     pieces.forEach((p) => p.classList.add("is-in"));
     return;

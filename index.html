@@ -8,6 +8,24 @@
       name="description"
       content="Lan Xu — AI Platform & Infrastructure Engineer. Agents, data platforms, and calm systems."
     />
+    <link rel="canonical" href="https://xlserena.github.io/" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://xlserena.github.io/" />
+    <meta property="og:title" content="Lan Xu — AI Platform & Infrastructure" />
+    <meta
+      property="og:description"
+      content="Production agents, data platforms, and quiet tooling for AI teams."
+    />
+    <meta property="og:image" content="https://xlserena.github.io/assets/hero.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lan Xu — AI Platform & Infrastructure" />
+    <meta
+      name="twitter:description"
+      content="Production agents, data platforms, and quiet tooling for AI teams."
+    />
+    <meta name="twitter:image" content="https://xlserena.github.io/assets/hero.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,7 +33,7 @@
       rel="stylesheet"
     />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <link rel="stylesheet" href="styles.css?v=20260806-18" />
+    <link rel="stylesheet" href="styles.css?v=20260806-20" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -25,6 +43,7 @@
       <nav class="nav" aria-label="Primary">
         <a href="#about" data-i18n="nav_about">About</a>
         <a href="#work" data-i18n="nav_work">Work</a>
+        <a href="#skills" data-i18n="nav_skills">Skills</a>
         <a href="#side" data-i18n="nav_side">Side notes</a>
         <a href="#contact" data-i18n="nav_contact">Contact</a>
       </nav>
@@ -159,7 +178,8 @@
             <p class="piece-blurb" data-i18n="work_costlens_blurb">
               Independently built unified spend governance across AI entry points for 8 groups / 240 people:
               ingestion, attribution, rankings, and Lark alerts—including trustworthy daily series from
-              cycle-total-only vendor APIs.
+              cycle-total-only vendor APIs. Hard part: reconstructing day-level series people could trust when
+              vendors only exposed billing-cycle totals—without double-counting alerts across entry points.
             </p>
           </article>
 
@@ -175,7 +195,8 @@
             <p class="piece-blurb" data-i18n="work_wide_blurb">
               Rebuilt 70–90 TB / ~12B-row payment decision wide tables that ~80% of risk jobs depended on:
               skew fixes, common-layer sink, and 62-day hot/cold split. Cut runtime ~6h→2h and ~4h→1.5h in the
-              heaviest rooms; hot-only reads ~16→10 min (~37%).
+              heaviest rooms; hot-only reads ~16→10 min (~37%). Hard part: landing a common-layer + hot/cold
+              redesign downstream jobs could adopt without a consumer rewrite wave.
             </p>
           </article>
 
@@ -191,8 +212,52 @@
             <p class="piece-blurb" data-i18n="work_rt_blurb">
               Built Flink real-time risk datasets with offline compensation and lag/failover/checkpoint
               monitors, moving stolen-card, ATO, and collusion sensing from ~h+6 hour tables to near real time.
+              Hard part: keeping jobs honest under lag and failover so near-real-time sensing stayed trustworthy
+              when streams hiccuped.
             </p>
           </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel skills" id="skills">
+        <div class="panel-inner">
+          <p class="section-kicker" data-i18n="skills_kicker">Public skills</p>
+          <h2 data-i18n="skills_title">Agent skills you can load.</h2>
+          <p class="skills-lede" data-i18n="skills_lede">
+            Method and checklists distilled from production work—no company code.
+          </p>
+          <div class="skills-list">
+            <a
+              class="skill-item"
+              href="https://github.com/XlSerena/agent-tool-safety"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div class="skill-head">
+                <h3 data-i18n="skill_tools_title">agent-tool-safety</h3>
+                <span class="skill-go" aria-hidden="true">↗</span>
+              </div>
+              <p class="skill-blurb" data-i18n="skill_tools_blurb">
+                Design and review production tool-calling under roles, concurrency, and dirty
+                upstream data—dual-layer auth, idempotency, and summary vs detailed delivery.
+              </p>
+            </a>
+            <a
+              class="skill-item"
+              href="https://github.com/XlSerena/costlens-skills"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div class="skill-head">
+                <h3 data-i18n="skill_spend_title">ai-spend-governance</h3>
+                <span class="skill-go" aria-hidden="true">↗</span>
+              </div>
+              <p class="skill-blurb" data-i18n="skill_spend_blurb">
+                Build a trustworthy AI / vibe-coding spend ledger across vendor entry points—
+                attribution, daily series from cycle totals, rankings, and deduplicated alerts.
+              </p>
+            </a>
           </div>
         </div>
       </section>
@@ -332,6 +397,6 @@
       <p data-i18n="footer">Quiet systems. Clear signals.</p>
     </footer>
 
-    <script src="main.js?v=20260806-18"></script>
+    <script src="main.js?v=20260806-20"></script>
   </body>
 </html>
