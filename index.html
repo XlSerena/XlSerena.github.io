@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <link rel="stylesheet" href="styles.css?v=20260806-2" />
+    <link rel="stylesheet" href="styles.css?v=20260806-3" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -100,6 +100,50 @@
               <span class="piece-index">01</span>
               <span class="piece-tag" data-i18n="tag_case">Case study</span>
             </div>
+            <h3 data-i18n="work_agents_title">Lark Multi-Agent Assistant</h3>
+            <p class="piece-sub" data-i18n="work_agents_sub">
+              Production agents for annotation, QC, and ops queries.
+            </p>
+            <div class="case-body">
+              <p class="case-block">
+                <strong data-i18n="work_agents_problem_label">Problem.</strong>
+                <span data-i18n="work_agents_problem">
+                  Annotation, QC, and ops teams needed answers from internal systems inside Lark—without
+                  waiting on engineers, and without exposing the wrong person’s data to the wrong role.
+                </span>
+              </p>
+              <p class="case-block">
+                <strong data-i18n="work_agents_owned_label">What I owned.</strong>
+                <span data-i18n="work_agents_owned">
+                  Built core pieces of the production agent stack: LangGraph router and domain sub-agents,
+                  40+ tools with role checks at graph build and tool run, plus the async path from Lark
+                  events through workers to streaming cards (Redis locks, rate limits, retries).
+                </span>
+              </p>
+              <p class="case-block">
+                <strong data-i18n="work_agents_hard_label">Hard part.</strong>
+                <span data-i18n="work_agents_hard">
+                  Concurrent chats would double-fire tools and stall cards; dirty upstream payloads and
+                  four role scopes made “just call the API” unsafe. Separated short LLM summaries from
+                  detailed card/spreadsheet outputs so the bot stayed useful under load instead of dumping
+                  tables into chat—or failing silently.
+                </span>
+              </p>
+              <p class="case-block">
+                <strong data-i18n="work_agents_result_label">Result.</strong>
+                <span data-i18n="work_agents_result">
+                  Live for four user types: 4,000+ production traces in 30 days, peaking at 327/day, with a
+                  100% LLM-call success rate in the latest seven-day window.
+                </span>
+              </p>
+            </div>
+          </article>
+
+          <article class="piece">
+            <div class="piece-meta">
+              <span class="piece-index">02</span>
+              <span class="piece-tag" data-i18n="tag_work">Work</span>
+            </div>
             <h3>CostLens</h3>
             <p class="piece-sub" data-i18n="work_costlens_sub">
               Vibe-coding AI spend, one ledger across every entry point.
@@ -144,23 +188,10 @@
 
           <article class="piece">
             <div class="piece-meta">
-              <span class="piece-index">02</span>
-              <span class="piece-tag" data-i18n="tag_work">Work</span>
-            </div>
-            <h3 data-i18n="work_dm3_agents_title">DM3 Agents Platform</h3>
-            <p data-i18n="work_dm3_agents">
-              Production multi-agent assistant on Lark: router and domain sub-agents with LangGraph /
-              DeepAgents, role-aware authorization, streaming interactive cards, and hardened async
-              workers—thousands of production traces with high LLM reliability.
-            </p>
-          </article>
-
-          <article class="piece">
-            <div class="piece-meta">
               <span class="piece-index">03</span>
               <span class="piece-tag" data-i18n="tag_work">Work</span>
             </div>
-            <h3 data-i18n="work_dm3_stats_title">DM3 Statistics</h3>
+            <h3 data-i18n="work_dm3_stats_title">Annotation &amp; QC Data Platform</h3>
             <p data-i18n="work_dm3_stats">
               Annotation and quality-control data platform: ODS→DWD→DWS→serving models for capacity,
               productivity, and human-versus-machine quality across hundreds of thousands of approved tasks.
@@ -316,6 +347,6 @@
       <p data-i18n="footer">Quiet systems. Clear signals.</p>
     </footer>
 
-    <script src="main.js?v=20260806-2"></script>
+    <script src="main.js?v=20260806-3"></script>
   </body>
 </html>
