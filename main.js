@@ -56,16 +56,6 @@ const copy = {
     work_cursor_result_label: "Result.",
     work_cursor_result:
       "One place to attribute AI usage and cost by person and group, with deduped threshold alerts and a morning ranking card—governance instead of spreadsheet archaeology across tools. Source stays private; a sanitized Skill (patterns only) is forthcoming.",
-    work_ttl_title: "TikTok · Core Risk KPIs",
-    work_ttl_sub: "Data Engineer Intern · bi-monthly leadership metrics on T+1.",
-    work_ttl_problem:
-      "Every bi-monthly review needed risk KPIs—intercept rates, loss rates, 3DS checks—but the strategy-owned pipelines were too long and unstable, often missing T+1 and drifting toward T+2, so leadership showed up without numbers.",
-    work_ttl_owned:
-      "Independently rebuilt seven TTL core KPIs into three lean APP models (loss, 3DS, intercept), aligned dashboard dimensions (time, region, country, payment method) with DPM/strategy, extracted signal from bloated legacy SQL, and shipped to the PayWise / risk cockpit with baseline and uniqueness monitors.",
-    work_ttl_hard:
-      "Legacy logic spanned six layers and ten non-reusable physical tables, full of unused fields. Cut the path to three models, tuned Spark (including Gluten), and reconciled diffs vs the old board down to sub-basis-point noise from base-table and intentional join cleanup—not silent wrong numbers.",
-    work_ttl_result:
-      "Average KPI latency improved ~17 hours; delivery held T+1 with near-100% on-time in the measured window—so bi-monthly reviews finally had trustworthy numbers.",
     work_wide_title: "TikTok · Decision Wide Tables",
     work_wide_sub: "Data Engineer Intern · unblocking the offline risk chain.",
     work_wide_problem:
@@ -180,16 +170,6 @@ const copy = {
     work_cursor_result_label: "结果。",
     work_cursor_result:
       "一个视图里按人/组归因各 AI 入口的用量与成本，配合去重门槛告警与早间排名卡片——用系统做治理，而不是跨工具扒表。源码属公司资产；脱敏 Skill（仅方法）即将公开。",
-    work_ttl_title: "TikTok · 风控核心指标",
-    work_ttl_sub: "数据工程实习 · 双月会指标稳定 T+1。",
-    work_ttl_problem:
-      "管理层双月会要看拦截率、资损率、3DS 等核心指标，但旧链路由策略侧维护、过长且不稳，经常破 T+1、甚至逼近 T+2，会上经常「没数可看」。",
-    work_ttl_owned:
-      "独立将 TTL 7 个核心指标收成 3 张精简 APP 模型（资损 / 3DS / 拦截），与 DPM、策略对齐看板维度（时间、机房、国家、支付方式），从臃肿旧 SQL 抽出有效逻辑，上线支付参谋/风控驾驶舱，并配基线与唯一性监控。",
-    work_ttl_hard:
-      "旧逻辑跨 6 层、落 10 张几乎不复用的物理表且字段冗余。压成 3 张模型，做 Spark 调参（含 Gluten），并把与旧看板的差异归因到万分位以下（底表差 + 去掉无效 join），避免静默错数。",
-    work_ttl_result:
-      "指标平均提前约 17 小时，观测窗口内近 100% 稳定 T+1——双月会终于有可信数字。",
     work_wide_title: "TikTok · 决策大宽表优化",
     work_wide_sub: "数据工程实习 · 打通离线风控链路卡点。",
     work_wide_problem:
