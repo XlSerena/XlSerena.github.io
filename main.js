@@ -25,6 +25,7 @@ const copy = {
     ],
     work_kicker: "Selected work",
     work_title: "A few things worth showing.",
+    work_lede: "AI platform first—agents and cost governance—with large-scale data systems as proof I can ship under load.",
     tag_case: "Case study",
     tag_work: "Work",
     tag_personal: "Personal",
@@ -35,22 +36,22 @@ const copy = {
       "Annotation, QC, and ops teams needed reliable answers from internal systems in chat—without waiting on engineers, and without exposing the wrong person’s data to the wrong role.",
     work_agents_owned_label: "What I owned.",
     work_agents_owned:
-      "Independently built the full production stack: LangGraph / DeepAgents router and domain sub-agents, 40+ tools with role checks at graph build and tool run, FastAPI services, Taskiq workers, Redis locks/rate limits/retries, MySQL checkpoints, and streaming interactive cards as the delivery surface. Agent tools read an annotation/QC warehouse I modeled—capacity, productivity, and human-vs-machine quality across 330K+ approved tasks.",
+      "Independently built the production agent runtime end to end: LangGraph / DeepAgents routing with domain sub-agents, 40+ tools with role checks at both graph build and tool run, and an async path from chat events to streaming cards. Wired tools into an annotation/QC warehouse I modeled—capacity, productivity, and human-vs-machine quality across 330K+ approved tasks.",
     work_agents_hard_label: "Hard part.",
     work_agents_hard:
       "Concurrent chats would double-fire tools and stall cards; dirty upstream payloads and four role scopes made “just call the API” unsafe. Separated short LLM summaries from detailed card/spreadsheet outputs so the runtime stayed useful under load instead of dumping tables into chat—or failing silently.",
     work_agents_result_label: "Result.",
     work_agents_result:
-      "Live for four user types: 4,000+ production traces in 30 days, peaking at 327/day, with a 100% LLM-call success rate.",
+      "Live for four user types: 4,000+ production traces in 30 days, peaking at 327/day, with no failed LLM calls in the measured window.",
     work_costlens_sub: "Vibe-coding AI spend, one ledger across every entry point.",
     work_costlens_blurb:
-      "Independently built unified spend governance across AI entry points for 8 groups / 240 people: ingestion, attribution, rankings, and Lark alerts—including trustworthy daily series from cycle-total-only vendor APIs. Source private; sanitized Skill forthcoming.",
+      "Independently built unified spend governance across AI entry points for 8 groups / 240 people: ingestion, attribution, rankings, and Lark alerts—including trustworthy daily series from cycle-total-only vendor APIs.",
     work_wide_title: "TikTok · Risk Table Optimization at Scale",
-    work_wide_sub: "Data Engineer Intern · cutting hours off the offline chain.",
+    work_wide_sub: "Data Engineer Intern · scale proof on the offline risk chain.",
     work_wide_blurb:
-      "Rebuilt 70–90 TB / ~12B-row payment decision wide tables that ~80% of risk jobs depended on: skew fixes, common-layer sink, and 62-day hot/cold split. Cut runtime ~6h→2h (VA) and ~4h→1.5h (SG); hot-only reads ~16→10 min (~37%).",
+      "Rebuilt 70–90 TB / ~12B-row payment decision wide tables that ~80% of risk jobs depended on: skew fixes, common-layer sink, and 62-day hot/cold split. Cut runtime ~6h→2h and ~4h→1.5h in the heaviest rooms; hot-only reads ~16→10 min (~37%).",
     work_rt_title: "TikTok · Near-Real-Time Risk Sensing",
-    work_rt_sub: "Data Engineer Intern · Flink against live abuse.",
+    work_rt_sub: "Data Engineer Intern · scale proof with Flink under live abuse.",
     work_rt_blurb:
       "Built Flink real-time risk datasets with offline compensation and lag/failover/checkpoint monitors, moving stolen-card, ATO, and collusion sensing from ~h+6 hour tables to near real time.",
     side_kicker: "Side notes",
@@ -113,6 +114,7 @@ const copy = {
     ],
     work_kicker: "精选作品",
     work_title: "几件值得拿出来看的事。",
+    work_lede: "主线是 AI 平台——智能体与成本治理；大规模数据系统用来证明我能在压力下把东西做稳。",
     tag_case: "案例",
     tag_work: "工作",
     tag_personal: "个人",
@@ -123,22 +125,22 @@ const copy = {
       "标注、质检与运营需要在对话里可靠查询内部系统——不能事事找工程师，也不能把不该看的数据交给错误角色。",
     work_agents_owned_label: "我负责。",
     work_agents_owned:
-      "独立完成整套生产栈：LangGraph / DeepAgents 路由与领域子智能体、40+ 工具（图构建与工具执行两层鉴权）、FastAPI 服务、Taskiq Worker、Redis 锁/限流/重试、MySQL checkpoint，以及流式交互卡片作为投递面。Agent 工具读取我建模的标注/质检数仓——产能、人效与人机质量，覆盖 33 万+ 已通过任务。",
+      "独立做出生产级 agent runtime：LangGraph / DeepAgents 路由与领域子智能体、40+ 工具（图构建与工具执行两层鉴权），以及从对话事件到流式卡片的异步投递。工具接上我建模的标注/质检数仓——产能、人效与人机质量，覆盖 33 万+ 已通过任务。",
     work_agents_hard_label: "难点。",
     work_agents_hard:
       "并发会话会让工具双发、卡片卡住；上游脏数据加上四种角色数据范围，不能「直接调 API」。把简短 LLM 摘要与明细卡片/表格输出拆开，让 runtime 在压力下仍可用，而不是把大表塞进对话——或静默失败。",
     work_agents_result_label: "结果。",
     work_agents_result:
-      "上线服务四类用户：30 天内 4,000+ 条生产 trace，峰值 327 条/天；LLM 调用成功率 100%。",
+      "上线服务四类用户：30 天内 4,000+ 条生产 trace，峰值 327 条/天；观测窗口内无失败 LLM 调用。",
     work_costlens_sub: "Vibe coding 的 AI 花销 · 跨入口统一台账。",
     work_costlens_blurb:
-      "独立搭建跨 AI 入口的统一成本治理，覆盖 8 组 / 240 人：同步、归因、排名与飞书告警，并在厂商仅提供账期累计时还原可信日序列。源码不公开；脱敏 Skill 即将发布。",
+      "独立搭建跨 AI 入口的统一成本治理，覆盖 8 组 / 240 人：同步、归因、排名与飞书告警，并在厂商仅提供账期累计时还原可信日序列。",
     work_wide_title: "TikTok · 大规模风控宽表优化",
-    work_wide_sub: "数据工程实习 · 把离线链路从小时级压下来。",
+    work_wide_sub: "数据工程实习 · 用规模证明离线链路扛得住。",
     work_wide_blurb:
-      "改造约八成风控任务依赖的支付决策宽表（70–90 TB / ~120 亿行）：倾斜治理、公共层下沉、62 天冷热分离。VA 约 6h→2h、SG 约 4h→1.5h；热分区取数约 16→10 分钟（~37%）。",
+      "改造约八成风控任务依赖的支付决策宽表（70–90 TB / ~120 亿行）：倾斜治理、公共层下沉、62 天冷热分离。最重机房约 6h→2h、4h→1.5h；热分区取数约 16→10 分钟（~37%）。",
     work_rt_title: "TikTok · 近实时风险感知",
-    work_rt_sub: "数据工程实习 · Flink 对抗进行中的滥用。",
+    work_rt_sub: "数据工程实习 · 用 Flink 证明实时对抗扛得住。",
     work_rt_blurb:
       "搭建 Flink 实时风险数据集，配合离线补偿与 lag/failover/checkpoint 监控，将盗卡、ATO、勾结等感知从小时表约 h+6 做到近实时。",
     side_kicker: "旁支",
