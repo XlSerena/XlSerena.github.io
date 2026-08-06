@@ -43,7 +43,8 @@ Previously a **Data Engineer Intern at TikTok**, accelerating fraud-risk pipelin
 ### Now · 近况
 
 - Shipping agent & data systems in production  
-- Public Agent Skills（方法与清单）：[agent-tool-safety](https://github.com/XlSerena/agent-tool-safety)（5 skills · `npx skills add XlSerena/agent-tool-safety`）· [costlens-skills](https://github.com/XlSerena/costlens-skills)  
+- Public Agent Skills：[agent-tool-safety](https://github.com/XlSerena/agent-tool-safety) · [costlens-skills](https://github.com/XlSerena/costlens-skills)（5 skills · `npx skills add XlSerena/costlens-skills`）· [story](https://github.com/XlSerena/costlens-skills/blob/main/docs/story-when-the-daily-chart-lied.md)  
+
 - M.S. Information — Big Data Analytics, University of Michigan  
 - B.Eng. ECE, Shanghai Jiao Tong University  
 

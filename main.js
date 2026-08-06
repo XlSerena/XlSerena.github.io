@@ -68,9 +68,9 @@ const copy = {
     skill_tools_title: "agent-tool-safety",
     skill_tools_blurb:
       "Five installable skills: dual-layer authz, idempotency, dirty-payload guards, summary vs detail delivery, and a full review pass. npx skills add XlSerena/agent-tool-safety",
-    skill_spend_title: "ai-spend-governance",
+    skill_spend_title: "costlens-skills",
     skill_spend_blurb:
-      "Build a trustworthy AI / vibe-coding spend ledger across vendor entry points—attribution, daily series from cycle totals, rankings, and deduplicated alerts.",
+      "Five installable skills: entry inventory, cycle-total→daily, attribution, deduped alerts, reconciliation + synthetic fixtures. npx skills add XlSerena/costlens-skills",
     side_kicker: "Side notes",
     side_title: "Smaller experiments worth keeping.",
     side_lede: "Games, XR, and playful systems at the edge of design and tech.",
@@ -171,9 +171,9 @@ const copy = {
     skill_tools_title: "agent-tool-safety",
     skill_tools_blurb:
       "五个可安装 skill：双层鉴权、幂等、脏上游校验、摘要/明细分流与端到端评审。npx skills add XlSerena/agent-tool-safety",
-    skill_spend_title: "ai-spend-governance",
+    skill_spend_title: "costlens-skills",
     skill_spend_blurb:
-      "搭建可信的 AI / vibe-coding 花销台账：跨入口归因、从账期累计还原日序列、排名与去重告警。",
+      "五个可安装 skill：入口盘点、账期累计→按日、组织归因、去重告警、对账，含合成 fixture。npx skills add XlSerena/costlens-skills",
     side_kicker: "旁支",
     side_title: "值得留下的小实验。",
     side_lede: "游戏、XR 与可玩系统，落在设计与科技的交界。",
