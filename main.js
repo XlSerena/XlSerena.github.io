@@ -57,19 +57,19 @@ const copy = {
     work_cursor_result:
       "One place to attribute AI usage and cost by person and group, with deduped threshold alerts and a morning ranking card—governance instead of spreadsheet archaeology across tools. Source stays private; a sanitized Skill (patterns only) is forthcoming.",
     work_tiktok_title: "TikTok · Fraud-Risk Pipelines",
-    work_tiktok_sub: "Data Engineer Intern · batch and streaming at scale.",
+    work_tiktok_sub: "Data Engineer Intern · KPIs, wide tables, and real-time risk sensing.",
     work_tiktok_problem_label: "Problem.",
     work_tiktok_problem:
-      "Fraud-risk KPIs and detection jobs were too slow for the business: batch chains slipped hours, and analysts waited on heavy analytical scans while abuse patterns moved faster.",
+      "Leadership needed risk KPIs (intercept rates, loss rates, and related metrics) for every bi-monthly review—but the old strategy-owned pipelines were too long and unstable, often missing T+1 and sometimes slipping toward T+2, so managers showed up without numbers. The same offline chain was also blocked by 70–90 TB decision wide tables, while risk sensing on hour tables lagged about six hours under queue pressure.",
     work_tiktok_owned_label: "What I owned.",
     work_tiktok_owned:
-      "Re-architected pipelines for seven mission-critical fraud-risk KPIs; tuned analytical datasets processing up to 90 TB / 12B rows per day; and built Kafka / Flink / ClickHouse monitoring for stolen-card, account-takeover, and collusion scenarios.",
+      "Rebuilt seven TTL core KPIs into three lean APP models (loss, 3DS, intercept) with dashboard dimensions agreed with DPM/strategy; optimized the payment-order decision wide tables that ~80% of risk jobs depended on (skew fixes, common-layer sink, join-order, 62-day hot/cold split); and shipped Flink real-time datasets with offline compensation and lag/failover/checkpoint monitors for stolen-card, ATO, and collusion scenes.",
     work_tiktok_hard_label: "Hard part.",
     work_tiktok_hard:
-      "Dependency chains and hot nodes made “add more compute” useless; skew and bad joins blew up runtime. Split hot/cold paths, fixed join strategies, and tightened scheduling so large scans and near-real-time monitors could coexist.",
+      "Strategy SQL was bloated with unused fields across six layers / ten non-reusable tables—signal had to be extracted, then shortened with Spark tuning (including Gluten). Wide tables were full DF rebuilds: null transaction_id skew (~200M rows), oversized params/factors shuffled too early, and hot/cold had to land as one physical table with atomic Hive metadata so Sensor dependents never saw a half-ready partition.",
     work_tiktok_result_label: "Result.",
     work_tiktok_result:
-      "Cut KPI output latency by 17+ hours at 100% on-time delivery; brought end-to-end analytical runtime from six hours to under two (~37% lower query latency); and moved key detection from six hours to near real time.",
+      "KPI latency improved ~17 hours with stable T+1 delivery (near-100% over the measured window). Wide-table runtime fell from ~6h→2h (VA) and ~4h→1.5h (SG), advancing risk-domain SLA by ~3h; hot-only reads cut query time ~16→10 min (~37%). Risk sensing moved from ~h+6 hour tables to near real time.",
     work_skills_title: "Skills",
     work_skills:
       "Public Cursor / Agent Skills will land here—reusable workflows and checklists, carefully stripped of internal systems and credentials.",
@@ -165,19 +165,19 @@ const copy = {
     work_cursor_result:
       "一个视图里按人/组归因各 AI 入口的用量与成本，配合去重门槛告警与早间排名卡片——用系统做治理，而不是跨工具扒表。源码属公司资产；脱敏 Skill（仅方法）即将公开。",
     work_tiktok_title: "TikTok · 欺诈风控数据链路",
-    work_tiktok_sub: "数据工程实习 · 大规模批流一体。",
+    work_tiktok_sub: "数据工程实习 · 核心指标、大宽表与实时风险感知。",
     work_tiktok_problem_label: "问题。",
     work_tiktok_problem:
-      "欺诈风控 KPI 与检测任务太慢：批处理链路动辄延误数小时，分析侧还在扫重表，而滥用模式已经换了节奏。",
+      "管理层双月会要看拦截率、资损率等风控核心指标，但旧链路由策略侧维护、层级过长且不稳定，经常破 T+1、甚至逼近 T+2，会上经常「没数可看」。同一条离线链路还被 70–90 TB 决策大宽表卡住；风险感知依赖小时表，在队列压力下常延迟约 6 小时。",
     work_tiktok_owned_label: "我负责。",
     work_tiktok_owned:
-      "重构 7 条核心欺诈风控 KPI 链路；优化日处理可达 90 TB / 120 亿行的分析数据集；并搭建 Kafka / Flink / ClickHouse 监测，覆盖盗卡、账户接管与团伙场景。",
+      "将 TTL 7 个核心指标收成 3 张精简 APP 模型（资损 / 3DS / 拦截），并与 DPM、策略对齐看板维度；优化约八成风控任务依赖的支付订单决策宽表（倾斜治理、公共层下沉、关联顺序、62 天冷热分离）；搭建 Flink 实时数据集、离线补偿，以及 lag / failover / checkpoint 监控，覆盖盗卡、ATO、买卖勾结等场景。",
     work_tiktok_hard_label: "难点。",
     work_tiktok_hard:
-      "依赖链与热点节点让「加机器」无效；数据倾斜与糟糕 join 会把耗时打爆。拆分冷热路径、修正 join 策略并收紧调度，让大扫描与近实时监测能并存。",
+      "旧策略 SQL 字段臃肿，底表到数据集落 6 层、10 张几乎不复用的物理表——要抽出指标相关逻辑再缩短链路，并做 Spark 调参（含 Gluten）。宽表是全量 DF：transaction_id 空值倾斜约 2 亿行、大字段过早 shuffle；冷热要落成同一物理表，且 Hive 元数据原子可见，避免 Sensor 下游读到半成品分区。",
     work_tiktok_result_label: "结果。",
     work_tiktok_result:
-      "KPI 产出延迟下降 17+ 小时且保持 100% 准时；分析端到端从 6 小时压到 2 小时内（查询延迟约降 37%）；关键检测从 6 小时做到近实时。",
+      "核心指标平均提前约 17 小时，并稳定在 T+1（观测窗口内近 100% 准时）。宽表 VA 约 6h→2h、SG 约 4h→1.5h，带动风控域 SLA 提前约 3h；仅查热分区时取数约 16→10 分钟（~37%）。风险感知从小时表约 h+6 做到近实时。",
     work_skills_title: "Skills",
     work_skills: "公开的 Cursor / Agent Skills 会放在这里——可复用的流程与清单，并仔细剥离内部系统与凭证。",
     side_kicker: "旁支",

@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <link rel="stylesheet" href="styles.css?v=20260806-6" />
+    <link rel="stylesheet" href="styles.css?v=20260806-7" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -195,38 +195,46 @@
             </div>
             <h3 data-i18n="work_tiktok_title">TikTok · Fraud-Risk Pipelines</h3>
             <p class="piece-sub" data-i18n="work_tiktok_sub">
-              Data Engineer Intern · batch and streaming at scale.
+              Data Engineer Intern · KPIs, wide tables, and real-time risk sensing.
             </p>
             <div class="case-body">
               <p class="case-block">
                 <strong data-i18n="work_tiktok_problem_label">Problem.</strong>
                 <span data-i18n="work_tiktok_problem">
-                  Fraud-risk KPIs and detection jobs were too slow for the business: batch chains slipped
-                  hours, and analysts waited on heavy analytical scans while abuse patterns moved faster.
+                  Leadership needed risk KPIs (intercept rates, loss rates, and related metrics) for every
+                  bi-monthly review—but the old strategy-owned pipelines were too long and unstable, often
+                  missing T+1 and sometimes slipping toward T+2, so managers showed up without numbers. The
+                  same offline chain was also blocked by 70–90 TB decision wide tables, while risk sensing on
+                  hour tables lagged about six hours under queue pressure.
                 </span>
               </p>
               <p class="case-block">
                 <strong data-i18n="work_tiktok_owned_label">What I owned.</strong>
                 <span data-i18n="work_tiktok_owned">
-                  Re-architected pipelines for seven mission-critical fraud-risk KPIs; tuned analytical
-                  datasets processing up to 90 TB / 12B rows per day; and built Kafka / Flink / ClickHouse
-                  monitoring for stolen-card, account-takeover, and collusion scenarios.
+                  Rebuilt seven TTL core KPIs into three lean APP models (loss, 3DS, intercept) with dashboard
+                  dimensions agreed with DPM/strategy; optimized the payment-order decision wide tables that
+                  ~80% of risk jobs depended on (skew fixes, common-layer sink, join-order, 62-day hot/cold
+                  split); and shipped Flink real-time datasets with offline compensation and
+                  lag/failover/checkpoint monitors for stolen-card, ATO, and collusion scenes.
                 </span>
               </p>
               <p class="case-block">
                 <strong data-i18n="work_tiktok_hard_label">Hard part.</strong>
                 <span data-i18n="work_tiktok_hard">
-                  Dependency chains and hot nodes made “add more compute” useless; skew and bad joins blew up
-                  runtime. Split hot/cold paths, fixed join strategies, and tightened scheduling so large
-                  scans and near-real-time monitors could coexist.
+                  Strategy SQL was bloated with unused fields across six layers / ten non-reusable
+                  tables—signal had to be extracted, then shortened with Spark tuning (including Gluten). Wide
+                  tables were full DF rebuilds: null transaction_id skew (~200M rows), oversized
+                  params/factors shuffled too early, and hot/cold had to land as one physical table with atomic
+                  Hive metadata so Sensor dependents never saw a half-ready partition.
                 </span>
               </p>
               <p class="case-block">
                 <strong data-i18n="work_tiktok_result_label">Result.</strong>
                 <span data-i18n="work_tiktok_result">
-                  Cut KPI output latency by 17+ hours at 100% on-time delivery; brought end-to-end analytical
-                  runtime from six hours to under two (~37% lower query latency); and moved key detection from
-                  six hours to near real time.
+                  KPI latency improved ~17 hours with stable T+1 delivery (near-100% over the measured window).
+                  Wide-table runtime fell from ~6h→2h (VA) and ~4h→1.5h (SG), advancing risk-domain SLA by ~3h;
+                  hot-only reads cut query time ~16→10 min (~37%). Risk sensing moved from ~h+6 hour tables to
+                  near real time.
                 </span>
               </p>
             </div>
@@ -381,6 +389,6 @@
       <p data-i18n="footer">Quiet systems. Clear signals.</p>
     </footer>
 
-    <script src="main.js?v=20260806-6"></script>
+    <script src="main.js?v=20260806-7"></script>
   </body>
 </html>
