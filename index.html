@@ -33,7 +33,7 @@
       rel="stylesheet"
     />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <link rel="stylesheet" href="styles.css?v=20260806-20" />
+    <link rel="stylesheet" href="styles.css?v=20260806-22" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -178,8 +178,14 @@
             <p class="piece-blurb" data-i18n="work_costlens_blurb">
               Independently built unified spend governance across AI entry points for 8 groups / 240 people:
               ingestion, attribution, rankings, and Lark alerts—including trustworthy daily series from
-              cycle-total-only vendor APIs. Hard part: reconstructing day-level series people could trust when
-              vendors only exposed billing-cycle totals—without double-counting alerts across entry points.
+              cycle-total-only vendor APIs.
+            </p>
+            <p class="piece-hard">
+              <strong data-i18n="work_hard_label">Hard part.</strong>
+              <span data-i18n="work_costlens_hard">
+                Reconstructing day-level series people could trust when vendors only exposed billing-cycle
+                totals—without double-counting alerts across entry points.
+              </span>
             </p>
           </article>
 
@@ -195,8 +201,14 @@
             <p class="piece-blurb" data-i18n="work_wide_blurb">
               Rebuilt 70–90 TB / ~12B-row payment decision wide tables that ~80% of risk jobs depended on:
               skew fixes, common-layer sink, and 62-day hot/cold split. Cut runtime ~6h→2h and ~4h→1.5h in the
-              heaviest rooms; hot-only reads ~16→10 min (~37%). Hard part: landing a common-layer + hot/cold
-              redesign downstream jobs could adopt without a consumer rewrite wave.
+              heaviest clusters; hot-only reads ~16→10 min (~37%).
+            </p>
+            <p class="piece-hard">
+              <strong data-i18n="work_hard_label">Hard part.</strong>
+              <span data-i18n="work_wide_hard">
+                Landing a common-layer + hot/cold redesign downstream jobs could adopt without a consumer
+                rewrite wave.
+              </span>
             </p>
           </article>
 
@@ -207,13 +219,18 @@
             </div>
             <h3 data-i18n="work_rt_title">TikTok · Near-Real-Time Risk Sensing</h3>
             <p class="piece-sub" data-i18n="work_rt_sub">
-              Data Engineer Intern · scale proof with Flink under live abuse.
+              Data Engineer Intern · scale proof with Flink under live fraud pressure.
             </p>
             <p class="piece-blurb" data-i18n="work_rt_blurb">
               Built Flink real-time risk datasets with offline compensation and lag/failover/checkpoint
               monitors, moving stolen-card, ATO, and collusion sensing from ~h+6 hour tables to near real time.
-              Hard part: keeping jobs honest under lag and failover so near-real-time sensing stayed trustworthy
-              when streams hiccuped.
+            </p>
+            <p class="piece-hard">
+              <strong data-i18n="work_hard_label">Hard part.</strong>
+              <span data-i18n="work_rt_hard">
+                Keeping jobs honest under lag and failover so near-real-time sensing stayed trustworthy when
+                streams hiccuped.
+              </span>
             </p>
           </article>
           </div>
@@ -225,7 +242,7 @@
           <p class="section-kicker" data-i18n="skills_kicker">Public skills</p>
           <h2 data-i18n="skills_title">Agent skills you can load.</h2>
           <p class="skills-lede" data-i18n="skills_lede">
-            Method and checklists distilled from production work—no company code.
+            Method and checklists distilled from production work.
           </p>
           <div class="skills-list">
             <a
@@ -397,6 +414,6 @@
       <p data-i18n="footer">Quiet systems. Clear signals.</p>
     </footer>
 
-    <script src="main.js?v=20260806-20"></script>
+    <script src="main.js?v=20260806-22"></script>
   </body>
 </html>
