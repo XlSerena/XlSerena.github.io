@@ -45,7 +45,7 @@ const copy = {
     work_costlens_sub: "Vibe-coding AI spend, one ledger across every entry point.",
     work_costlens_blurb:
       "Independently built unified spend governance across AI entry points for 8 groups / 240 people: ingestion, attribution, rankings, and Lark alerts—including trustworthy daily series from cycle-total-only vendor APIs. Source private; sanitized Skill forthcoming.",
-    work_wide_title: "TikTok · Risk Tables at Scale",
+    work_wide_title: "TikTok · Risk Table Optimization at Scale",
     work_wide_sub: "Data Engineer Intern · cutting hours off the offline chain.",
     work_wide_blurb:
       "Rebuilt 70–90 TB / ~12B-row payment decision wide tables that ~80% of risk jobs depended on: skew fixes, common-layer sink, and 62-day hot/cold split. Cut runtime ~6h→2h (VA) and ~4h→1.5h (SG); hot-only reads ~16→10 min (~37%).",
@@ -133,7 +133,7 @@ const copy = {
     work_costlens_sub: "Vibe coding 的 AI 花销 · 跨入口统一台账。",
     work_costlens_blurb:
       "独立搭建跨 AI 入口的统一成本治理，覆盖 8 组 / 240 人：同步、归因、排名与飞书告警，并在厂商仅提供账期累计时还原可信日序列。源码不公开；脱敏 Skill 即将发布。",
-    work_wide_title: "TikTok · 大规模风控宽表",
+    work_wide_title: "TikTok · 大规模风控宽表优化",
     work_wide_sub: "数据工程实习 · 把离线链路从小时级压下来。",
     work_wide_blurb:
       "改造约八成风控任务依赖的支付决策宽表（70–90 TB / ~120 亿行）：倾斜治理、公共层下沉、62 天冷热分离。VA 约 6h→2h、SG 约 4h→1.5h；热分区取数约 16→10 分钟（~37%）。",
