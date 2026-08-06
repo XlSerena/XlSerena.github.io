@@ -100,30 +100,46 @@
               <span class="piece-index">01</span>
               <span class="piece-tag" data-i18n="tag_case">Case study</span>
             </div>
-            <h3>CursorLedger</h3>
-            <ul class="case-beats" data-i18n-list="work_cursor_beats">
-              <li>
-                Problem. AI usage was scattered across company entry points (e.g. Cursor and an AI
-                gateway)—no single ledger by person or team before costs hit the invoice.
-              </li>
-              <li>
-                Owned. Independently built a unified cost-governance platform: ingestion, identity/group
-                attribution for 8 groups (131 + 108 people), rankings and drill-downs, Docker deploy, and
-                Lark bots for daily rankings and threshold alerts.
-              </li>
-              <li>
-                Hard part. Normalized heterogeneous APIs into one attribution model—including turning
-                Cursor’s cycle-to-date spend into a trustworthy daily series across billing rollovers,
-                negative adjustments, and departed users.
-              </li>
-              <li>
-                Result. One view to govern AI spend by person and group, with deduped alerts and a morning
-                ranking card—instead of spreadsheet archaeology across tools.
-              </li>
-            </ul>
-            <p class="piece-note" data-i18n="work_cursor_note">
-              Source remains private (company property). A sanitized Skill—patterns only—is forthcoming.
+            <h3>CostLens</h3>
+            <p class="piece-sub" data-i18n="work_costlens_sub">
+              Vibe-coding AI spend, one ledger across every entry point.
             </p>
+            <div class="case-body">
+              <p class="case-block">
+                <strong data-i18n="work_cursor_problem_label">Problem.</strong>
+                <span data-i18n="work_cursor_problem">
+                  Vibe coding made AI spend grow fast and hard to govern: usage was scattered across tools
+                  and gateways, so leads lacked one trustworthy view of who used what—by person and team—before
+                  costs piled up.
+                </span>
+              </p>
+              <p class="case-block">
+                <strong data-i18n="work_cursor_owned_label">What I owned.</strong>
+                <span data-i18n="work_cursor_owned">
+                  Independently built a unified cost-governance platform across those entry points: API
+                  ingestion, identity/group mapping for 8 groups, totaling 240 people, rankings and
+                  drill-downs, Docker deploy, plus Lark bots for daily rankings and threshold alerts.
+                </span>
+              </p>
+              <p class="case-block">
+                <strong data-i18n="work_cursor_hard_label">Hard part.</strong>
+                <span data-i18n="work_cursor_hard">
+                  Vendor APIs often expose cycle-to-date spend, not daily dollars—so same-cycle snapshots and
+                  diffs had to produce a reliable daily series, while usage from other entry points was
+                  normalized into the same attribution model. Billing rollovers, negative adjustments,
+                  departed users, and dual API schemas were handled so the ledger didn’t invent fake days or
+                  false cycle breaks.
+                </span>
+              </p>
+              <p class="case-block">
+                <strong data-i18n="work_cursor_result_label">Result.</strong>
+                <span data-i18n="work_cursor_result">
+                  One place to attribute AI usage and cost by person and group, with deduped threshold alerts
+                  and a morning ranking card—governance instead of spreadsheet archaeology across tools.
+                  Source stays private; a sanitized Skill (patterns only) is forthcoming.
+                </span>
+              </p>
+            </div>
           </article>
 
           <article class="piece">
@@ -300,6 +316,6 @@
       <p data-i18n="footer">Quiet systems. Clear signals.</p>
     </footer>
 
-    <script src="main.js?v=20260806-1"></script>
+    <script src="main.js?v=20260806-2"></script>
   </body>
 </html>

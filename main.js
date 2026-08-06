@@ -29,13 +29,19 @@ const copy = {
     tag_work: "Work",
     tag_personal: "Personal",
     tag_soon: "Soon",
-    work_cursor_beats: [
-      "Problem. AI usage was scattered across company entry points (e.g. Cursor and an AI gateway)—no single ledger by person or team before costs hit the invoice.",
-      "Owned. Independently built a unified cost-governance platform: ingestion, identity/group attribution for 8 groups (131 + 108 people), rankings and drill-downs, Docker deploy, and Lark bots for daily rankings and threshold alerts.",
-      "Hard part. Normalized heterogeneous APIs into one attribution model—including turning Cursor’s cycle-to-date spend into a trustworthy daily series across billing rollovers, negative adjustments, and departed users.",
-      "Result. One view to govern AI spend by person and group, with deduped alerts and a morning ranking card—instead of spreadsheet archaeology across tools.",
-    ],
-    work_cursor_note: "Source remains private (company property). A sanitized Skill—patterns only—is forthcoming.",
+    work_costlens_sub: "Vibe-coding AI spend, one ledger across every entry point.",
+    work_cursor_problem_label: "Problem.",
+    work_cursor_problem:
+      "Vibe coding made AI spend grow fast and hard to govern: usage was scattered across tools and gateways, so leads lacked one trustworthy view of who used what—by person and team—before costs piled up.",
+    work_cursor_owned_label: "What I owned.",
+    work_cursor_owned:
+      "Independently built a unified cost-governance platform across those entry points: API ingestion, identity/group mapping for 8 groups, totaling 240 people, rankings and drill-downs, Docker deploy, plus Lark bots for daily rankings and threshold alerts.",
+    work_cursor_hard_label: "Hard part.",
+    work_cursor_hard:
+      "Vendor APIs often expose cycle-to-date spend, not daily dollars—so same-cycle snapshots and diffs had to produce a reliable daily series, while usage from other entry points was normalized into the same attribution model. Billing rollovers, negative adjustments, departed users, and dual API schemas were handled so the ledger didn’t invent fake days or false cycle breaks.",
+    work_cursor_result_label: "Result.",
+    work_cursor_result:
+      "One place to attribute AI usage and cost by person and group, with deduped threshold alerts and a morning ranking card—governance instead of spreadsheet archaeology across tools. Source stays private; a sanitized Skill (patterns only) is forthcoming.",
     work_dm3_agents_title: "DM3 Agents Platform",
     work_dm3_agents:
       "Production multi-agent assistant on Lark: router and domain sub-agents with LangGraph / DeepAgents, role-aware authorization, streaming interactive cards, and hardened async workers—thousands of production traces with high LLM reliability.",
@@ -109,13 +115,19 @@ const copy = {
     tag_work: "工作",
     tag_personal: "个人",
     tag_soon: "即将",
-    work_cursor_beats: [
-      "问题。公司各 AI 入口（如 Cursor 与 AI gateway）的用量分散，缺少按人/组的统一账本，往往要等账单才知道花了多少。",
-      "负责。独立搭建统一成本治理平台：同步与邮箱/分组归因（8 组，131 + 108 人）、排名与下钻、Docker 部署，以及飞书每日排名与消费门槛告警。",
-      "难点。把异构 API 收敛到同一套归因口径——包括把 Cursor 的账期累计消费，在账期切换、负向修正与离职成员等边界下，还原成可信的按日序列。",
-      "结果。一个视图里按人/组治理 AI 花费，配合去重告警与早间排名卡片——而不是跨工具事后扒表。",
-    ],
-    work_cursor_note: "源码属公司资产，不公开。脱敏 Skill（仅方法与清单）即将推出。",
+    work_costlens_sub: "Vibe coding 的 AI 花销 · 跨入口统一台账。",
+    work_cursor_problem_label: "问题。",
+    work_cursor_problem:
+      "Vibe coding 让 AI 花销涨得快、却难治理：用量散落在不同工具与中转入口，负责人缺少按人/组看清「谁用了什么」的可信视图，成本往往堆到账单才暴露。",
+    work_cursor_owned_label: "我负责。",
+    work_cursor_owned:
+      "独立搭建覆盖上述入口的统一成本治理平台：API 同步、邮箱/分组归因（8 组，共计 240 人）、排名与下钻、Docker 部署，以及飞书每日排名与消费门槛告警。",
+    work_cursor_hard_label: "难点。",
+    work_cursor_hard:
+      "厂商 API 往往只给账期累计、没有按日美元，需用同账期快照做差还原可信日序列，并把其他入口的用量纳入同一套归因口径；同时正确处理账期切换、负向修正、离职成员与双 schema，避免假日期或误判新账期。",
+    work_cursor_result_label: "结果。",
+    work_cursor_result:
+      "一个视图里按人/组归因各 AI 入口的用量与成本，配合去重门槛告警与早间排名卡片——用系统做治理，而不是跨工具扒表。源码属公司资产；脱敏 Skill（仅方法）即将公开。",
     work_dm3_agents_title: "DM3 多智能体平台",
     work_dm3_agents:
       "面向飞书的生产级多智能体助手：以 LangGraph / DeepAgents 编排路由与领域子智能体，角色授权、流式交互卡片与稳健异步 Worker——支撑数千条生产 trace，并保持高 LLM 调用成功率。",

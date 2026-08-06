@@ -376,6 +376,14 @@ a {
   font-size: 1.55rem;
 }
 
+.piece-sub {
+  grid-column: 2;
+  margin: -0.15rem 0 0.15rem;
+  max-width: 42rem;
+  font-size: 1.02rem;
+  color: var(--pine-deep);
+}
+
 .piece p {
   grid-column: 2;
   margin: 0;
@@ -383,21 +391,25 @@ a {
   color: var(--ink-soft);
 }
 
-.case-beats {
+.case-body {
   grid-column: 2;
-  margin: 0;
-  padding: 0;
-  max-width: 40rem;
-  list-style: none;
   display: grid;
-  gap: 0.65rem;
-  color: var(--ink-soft);
+  gap: 0.7rem;
+  max-width: 42rem;
 }
 
-.case-beats li {
+.case-block {
   margin: 0;
-  padding: 0;
+  color: var(--ink-soft);
   line-height: 1.55;
+}
+
+.case-block strong {
+  display: inline;
+  margin-right: 0.35em;
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--pine-deep);
 }
 
 .piece-note {
@@ -780,8 +792,9 @@ body.modal-open {
   }
 
   .piece h3,
+  .piece-sub,
   .piece p,
-  .case-beats {
+  .case-body {
     grid-column: 1;
   }
 }
