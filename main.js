@@ -36,7 +36,7 @@ const copy = {
       "Annotation, QC, and ops teams needed reliable answers from internal systems in chat—without waiting on engineers, and without exposing the wrong person’s data to the wrong role.",
     work_agents_owned_label: "What I owned.",
     work_agents_owned:
-      "Independently built the production agent runtime end to end: LangGraph / DeepAgents routing with domain sub-agents, 40+ tools with role checks at both graph build and tool run, and an async path from chat events to streaming cards. Wired tools into an annotation/QC warehouse I modeled—capacity, productivity, and human-vs-machine quality across 330K+ approved tasks.",
+      "Independently built the production agent runtime end to end: LangGraph / DeepAgents routing with domain sub-agents, 40+ tools with role checks at both graph build and tool run, and an async path from chat events through Taskiq workers to streaming cards—with Redis locks/rate limits/retries, FastAPI services, and MySQL checkpoints. Wired tools into an annotation/QC warehouse I modeled—capacity, productivity, and human-vs-machine quality across 330K+ approved tasks.",
     work_agents_hard_label: "Hard part.",
     work_agents_hard:
       "Concurrent chats would double-fire tools and stall cards; dirty upstream payloads and four role scopes made “just call the API” unsafe. Separated short LLM summaries from detailed card/spreadsheet outputs so the runtime stayed useful under load instead of dumping tables into chat—or failing silently.",
@@ -125,7 +125,7 @@ const copy = {
       "标注、质检与运营需要在对话里可靠查询内部系统——不能事事找工程师，也不能把不该看的数据交给错误角色。",
     work_agents_owned_label: "我负责。",
     work_agents_owned:
-      "独立做出生产级 agent runtime：LangGraph / DeepAgents 路由与领域子智能体、40+ 工具（图构建与工具执行两层鉴权），以及从对话事件到流式卡片的异步投递。工具接上我建模的标注/质检数仓——产能、人效与人机质量，覆盖 33 万+ 已通过任务。",
+      "独立做出生产级 agent runtime：LangGraph / DeepAgents 路由与领域子智能体、40+ 工具（图构建与工具执行两层鉴权），以及对话事件经 Taskiq Worker 到流式卡片的异步投递——配合 Redis 锁/限流/重试、FastAPI 与 MySQL checkpoint。工具接上我建模的标注/质检数仓——产能、人效与人机质量，覆盖 33 万+ 已通过任务。",
     work_agents_hard_label: "难点。",
     work_agents_hard:
       "并发会话会让工具双发、卡片卡住；上游脏数据加上四种角色数据范围，不能「直接调 API」。把简短 LLM 摘要与明细卡片/表格输出拆开，让 runtime 在压力下仍可用，而不是把大表塞进对话——或静默失败。",

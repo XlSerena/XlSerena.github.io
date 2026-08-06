@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <link rel="stylesheet" href="styles.css?v=20260806-14" />
+    <link rel="stylesheet" href="styles.css?v=20260806-15" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -122,8 +122,10 @@
                 <span data-i18n="work_agents_owned">
                   Independently built the production agent runtime end to end: LangGraph / DeepAgents routing
                   with domain sub-agents, 40+ tools with role checks at both graph build and tool run, and an
-                  async path from chat events to streaming cards. Wired tools into an annotation/QC warehouse I
-                  modeled—capacity, productivity, and human-vs-machine quality across 330K+ approved tasks.
+                  async path from chat events through Taskiq workers to streaming cards—with Redis
+                  locks/rate limits/retries, FastAPI services, and MySQL checkpoints. Wired tools into an
+                  annotation/QC warehouse I modeled—capacity, productivity, and human-vs-machine quality across
+                  330K+ approved tasks.
                 </span>
               </p>
               <p class="case-block">
@@ -330,6 +332,6 @@
       <p data-i18n="footer">Quiet systems. Clear signals.</p>
     </footer>
 
-    <script src="main.js?v=20260806-14"></script>
+    <script src="main.js?v=20260806-15"></script>
   </body>
 </html>
