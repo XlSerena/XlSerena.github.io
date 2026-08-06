@@ -28,7 +28,6 @@ const copy = {
     tag_case: "Case study",
     tag_work: "Work",
     tag_personal: "Personal",
-    tag_soon: "Soon",
     work_agents_title: "Production Multi-Agent Stack",
     work_agents_sub: "Router, tools, and async delivery for annotation, QC, and ops.",
     work_agents_problem_label: "Problem.",
@@ -76,9 +75,6 @@ const copy = {
       "Real-time paths fail quietly under burst lag or checkpoint loss; paired runtime alerts with later offline/online consistency checks so missing or duplicated rows could be caught before the board lied.",
     work_rt_result:
       "Moved key risk sensing from ~h+6 hour tables to near real time for stolen-card, account-takeover, and buyer–seller collusion scenes.",
-    work_skills_title: "Skills",
-    work_skills:
-      "Public Cursor / Agent Skills will land here—reusable workflows and checklists, carefully stripped of internal systems and credentials.",
     side_kicker: "Side notes",
     side_title: "Smaller experiments worth keeping.",
     side_lede: "Games, XR, and playful systems at the edge of design and tech.",
@@ -142,7 +138,6 @@ const copy = {
     tag_case: "案例",
     tag_work: "工作",
     tag_personal: "个人",
-    tag_soon: "即将",
     work_agents_title: "Production Multi-Agent Stack",
     work_agents_sub: "路由、工具与异步投递，服务标注 / 质检 / 运营。",
     work_agents_problem_label: "问题。",
@@ -190,8 +185,6 @@ const copy = {
       "实时链路会在堆积或 checkpoint 失败时静默劣化；用运行告警，并补离在线一致性核对，避免看板漏数/重数而不自知。",
     work_rt_result:
       "关键风险感知从小时表约 h+6 做到近实时，支撑盗卡、账户接管、BC 勾结等场景的实时对抗。",
-    work_skills_title: "Skills",
-    work_skills: "公开的 Cursor / Agent Skills 会放在这里——可复用的流程与清单，并仔细剥离内部系统与凭证。",
     side_kicker: "旁支",
     side_title: "值得留下的小实验。",
     side_lede: "游戏、XR 与可玩系统，落在设计与科技的交界。",
