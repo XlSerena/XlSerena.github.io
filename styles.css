@@ -447,8 +447,8 @@ a {
 }
 
 .piece-hard strong {
-  display: block;
-  margin: 0 0 0.2rem;
+  display: inline;
+  margin-right: 0.35em;
   font-family: var(--font-display);
   font-weight: 600;
   color: var(--pine-deep);
