@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <link rel="stylesheet" href="styles.css?v=20260806-5" />
+    <link rel="stylesheet" href="styles.css?v=20260806-6" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -118,7 +118,8 @@
                   Independently built the full production stack: LangGraph / DeepAgents router and domain
                   sub-agents, 40+ tools with role checks at graph build and tool run, FastAPI services,
                   Taskiq workers, Redis locks/rate limits/retries, MySQL checkpoints, and streaming
-                  interactive cards as the delivery surface.
+                  interactive cards as the delivery surface. Agent tools read an annotation/QC warehouse I
+                  modeled—capacity, productivity, and human-vs-machine quality across 330K+ approved tasks.
                 </span>
               </p>
               <p class="case-block">
@@ -192,11 +193,43 @@
               <span class="piece-index">03</span>
               <span class="piece-tag" data-i18n="tag_work">Work</span>
             </div>
-            <h3 data-i18n="work_dm3_stats_title">Annotation &amp; QC Data Platform</h3>
-            <p data-i18n="work_dm3_stats">
-              Annotation and quality-control data platform: ODS→DWD→DWS→serving models for capacity,
-              productivity, and human-versus-machine quality across hundreds of thousands of approved tasks.
+            <h3 data-i18n="work_tiktok_title">TikTok · Fraud-Risk Pipelines</h3>
+            <p class="piece-sub" data-i18n="work_tiktok_sub">
+              Data Engineer Intern · batch and streaming at scale.
             </p>
+            <div class="case-body">
+              <p class="case-block">
+                <strong data-i18n="work_tiktok_problem_label">Problem.</strong>
+                <span data-i18n="work_tiktok_problem">
+                  Fraud-risk KPIs and detection jobs were too slow for the business: batch chains slipped
+                  hours, and analysts waited on heavy analytical scans while abuse patterns moved faster.
+                </span>
+              </p>
+              <p class="case-block">
+                <strong data-i18n="work_tiktok_owned_label">What I owned.</strong>
+                <span data-i18n="work_tiktok_owned">
+                  Re-architected pipelines for seven mission-critical fraud-risk KPIs; tuned analytical
+                  datasets processing up to 90 TB / 12B rows per day; and built Kafka / Flink / ClickHouse
+                  monitoring for stolen-card, account-takeover, and collusion scenarios.
+                </span>
+              </p>
+              <p class="case-block">
+                <strong data-i18n="work_tiktok_hard_label">Hard part.</strong>
+                <span data-i18n="work_tiktok_hard">
+                  Dependency chains and hot nodes made “add more compute” useless; skew and bad joins blew up
+                  runtime. Split hot/cold paths, fixed join strategies, and tightened scheduling so large
+                  scans and near-real-time monitors could coexist.
+                </span>
+              </p>
+              <p class="case-block">
+                <strong data-i18n="work_tiktok_result_label">Result.</strong>
+                <span data-i18n="work_tiktok_result">
+                  Cut KPI output latency by 17+ hours at 100% on-time delivery; brought end-to-end analytical
+                  runtime from six hours to under two (~37% lower query latency); and moved key detection from
+                  six hours to near real time.
+                </span>
+              </p>
+            </div>
           </article>
 
           <article class="piece soft">
@@ -348,6 +381,6 @@
       <p data-i18n="footer">Quiet systems. Clear signals.</p>
     </footer>
 
-    <script src="main.js?v=20260806-5"></script>
+    <script src="main.js?v=20260806-6"></script>
   </body>
 </html>

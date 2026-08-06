@@ -36,7 +36,7 @@ const copy = {
       "Annotation, QC, and ops teams needed reliable answers from internal systems in chat—without waiting on engineers, and without exposing the wrong person’s data to the wrong role.",
     work_agents_owned_label: "What I owned.",
     work_agents_owned:
-      "Independently built the full production stack: LangGraph / DeepAgents router and domain sub-agents, 40+ tools with role checks at graph build and tool run, FastAPI services, Taskiq workers, Redis locks/rate limits/retries, MySQL checkpoints, and streaming interactive cards as the delivery surface.",
+      "Independently built the full production stack: LangGraph / DeepAgents router and domain sub-agents, 40+ tools with role checks at graph build and tool run, FastAPI services, Taskiq workers, Redis locks/rate limits/retries, MySQL checkpoints, and streaming interactive cards as the delivery surface. Agent tools read an annotation/QC warehouse I modeled—capacity, productivity, and human-vs-machine quality across 330K+ approved tasks.",
     work_agents_hard_label: "Hard part.",
     work_agents_hard:
       "Concurrent chats would double-fire tools and stall cards; dirty upstream payloads and four role scopes made “just call the API” unsafe. Separated short LLM summaries from detailed card/spreadsheet outputs so the runtime stayed useful under load instead of dumping tables into chat—or failing silently.",
@@ -56,9 +56,20 @@ const copy = {
     work_cursor_result_label: "Result.",
     work_cursor_result:
       "One place to attribute AI usage and cost by person and group, with deduped threshold alerts and a morning ranking card—governance instead of spreadsheet archaeology across tools. Source stays private; a sanitized Skill (patterns only) is forthcoming.",
-    work_dm3_stats_title: "Annotation & QC Data Platform",
-    work_dm3_stats:
-      "Annotation and quality-control data platform: ODS→DWD→DWS→serving models for capacity, productivity, and human-versus-machine quality across hundreds of thousands of approved tasks.",
+    work_tiktok_title: "TikTok · Fraud-Risk Pipelines",
+    work_tiktok_sub: "Data Engineer Intern · batch and streaming at scale.",
+    work_tiktok_problem_label: "Problem.",
+    work_tiktok_problem:
+      "Fraud-risk KPIs and detection jobs were too slow for the business: batch chains slipped hours, and analysts waited on heavy analytical scans while abuse patterns moved faster.",
+    work_tiktok_owned_label: "What I owned.",
+    work_tiktok_owned:
+      "Re-architected pipelines for seven mission-critical fraud-risk KPIs; tuned analytical datasets processing up to 90 TB / 12B rows per day; and built Kafka / Flink / ClickHouse monitoring for stolen-card, account-takeover, and collusion scenarios.",
+    work_tiktok_hard_label: "Hard part.",
+    work_tiktok_hard:
+      "Dependency chains and hot nodes made “add more compute” useless; skew and bad joins blew up runtime. Split hot/cold paths, fixed join strategies, and tightened scheduling so large scans and near-real-time monitors could coexist.",
+    work_tiktok_result_label: "Result.",
+    work_tiktok_result:
+      "Cut KPI output latency by 17+ hours at 100% on-time delivery; brought end-to-end analytical runtime from six hours to under two (~37% lower query latency); and moved key detection from six hours to near real time.",
     work_skills_title: "Skills",
     work_skills:
       "Public Cursor / Agent Skills will land here—reusable workflows and checklists, carefully stripped of internal systems and credentials.",
@@ -133,7 +144,7 @@ const copy = {
       "标注、质检与运营需要在对话里可靠查询内部系统——不能事事找工程师，也不能把不该看的数据交给错误角色。",
     work_agents_owned_label: "我负责。",
     work_agents_owned:
-      "独立完成整套生产栈：LangGraph / DeepAgents 路由与领域子智能体、40+ 工具（图构建与工具执行两层鉴权）、FastAPI 服务、Taskiq Worker、Redis 锁/限流/重试、MySQL checkpoint，以及流式交互卡片作为投递面。",
+      "独立完成整套生产栈：LangGraph / DeepAgents 路由与领域子智能体、40+ 工具（图构建与工具执行两层鉴权）、FastAPI 服务、Taskiq Worker、Redis 锁/限流/重试、MySQL checkpoint，以及流式交互卡片作为投递面。Agent 工具读取我建模的标注/质检数仓——产能、人效与人机质量，覆盖 33 万+ 已通过任务。",
     work_agents_hard_label: "难点。",
     work_agents_hard:
       "并发会话会让工具双发、卡片卡住；上游脏数据加上四种角色数据范围，不能「直接调 API」。把简短 LLM 摘要与明细卡片/表格输出拆开，让 runtime 在压力下仍可用，而不是把大表塞进对话——或静默失败。",
@@ -153,9 +164,20 @@ const copy = {
     work_cursor_result_label: "结果。",
     work_cursor_result:
       "一个视图里按人/组归因各 AI 入口的用量与成本，配合去重门槛告警与早间排名卡片——用系统做治理，而不是跨工具扒表。源码属公司资产；脱敏 Skill（仅方法）即将公开。",
-    work_dm3_stats_title: "标注与质检数据平台",
-    work_dm3_stats:
-      "标注与质检数据平台：ODS→DWD→DWS→服务层模型，覆盖产能、人效，以及人机质量对比，支撑数十万级已通过任务的分析。",
+    work_tiktok_title: "TikTok · 欺诈风控数据链路",
+    work_tiktok_sub: "数据工程实习 · 大规模批流一体。",
+    work_tiktok_problem_label: "问题。",
+    work_tiktok_problem:
+      "欺诈风控 KPI 与检测任务太慢：批处理链路动辄延误数小时，分析侧还在扫重表，而滥用模式已经换了节奏。",
+    work_tiktok_owned_label: "我负责。",
+    work_tiktok_owned:
+      "重构 7 条核心欺诈风控 KPI 链路；优化日处理可达 90 TB / 120 亿行的分析数据集；并搭建 Kafka / Flink / ClickHouse 监测，覆盖盗卡、账户接管与团伙场景。",
+    work_tiktok_hard_label: "难点。",
+    work_tiktok_hard:
+      "依赖链与热点节点让「加机器」无效；数据倾斜与糟糕 join 会把耗时打爆。拆分冷热路径、修正 join 策略并收紧调度，让大扫描与近实时监测能并存。",
+    work_tiktok_result_label: "结果。",
+    work_tiktok_result:
+      "KPI 产出延迟下降 17+ 小时且保持 100% 准时；分析端到端从 6 小时压到 2 小时内（查询延迟约降 37%）；关键检测从 6 小时做到近实时。",
     work_skills_title: "Skills",
     work_skills: "公开的 Cursor / Agent Skills 会放在这里——可复用的流程与清单，并仔细剥离内部系统与凭证。",
     side_kicker: "旁支",
