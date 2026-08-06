@@ -29,9 +29,13 @@ const copy = {
     tag_work: "Work",
     tag_personal: "Personal",
     tag_soon: "Soon",
-    work_cursor:
-      "An end-to-end platform for AI developer-tool cost governance: Cursor Admin API ingestion, spend attribution, rankings, drill-downs, and alerting—designed for billing-cycle edge cases and noisy real-world usage. Source remains private (company property); a sanitized public Skill is forthcoming.",
-    work_cursor_note: "Coming soon — Cursor / Agent Skill (patterns only, no proprietary code).",
+    work_cursor_beats: [
+      "Problem. AI usage was scattered across company entry points (e.g. Cursor and an AI gateway)—no single ledger by person or team before costs hit the invoice.",
+      "Owned. Independently built a unified cost-governance platform: ingestion, identity/group attribution for 8 groups (131 + 108 people), rankings and drill-downs, Docker deploy, and Lark bots for daily rankings and threshold alerts.",
+      "Hard part. Normalized heterogeneous APIs into one attribution model—including turning Cursor’s cycle-to-date spend into a trustworthy daily series across billing rollovers, negative adjustments, and departed users.",
+      "Result. One view to govern AI spend by person and group, with deduped alerts and a morning ranking card—instead of spreadsheet archaeology across tools.",
+    ],
+    work_cursor_note: "Source remains private (company property). A sanitized Skill—patterns only—is forthcoming.",
     work_dm3_agents_title: "DM3 Agents Platform",
     work_dm3_agents:
       "Production multi-agent assistant on Lark: router and domain sub-agents with LangGraph / DeepAgents, role-aware authorization, streaming interactive cards, and hardened async workers—thousands of production traces with high LLM reliability.",
@@ -105,9 +109,13 @@ const copy = {
     tag_work: "工作",
     tag_personal: "个人",
     tag_soon: "即将",
-    work_cursor:
-      "端到端的 AI 研发工具成本治理平台：接入 Cursor Admin API，完成消费归因、排名、下钻与告警，并处理账期切换与真实使用中的边界情况。完整源码属公司资产，不公开；脱敏后的公开 Skill 即将发布。",
-    work_cursor_note: "即将推出 — Cursor / Agent Skill（仅方法与清单，不含专有代码）。",
+    work_cursor_beats: [
+      "问题。公司各 AI 入口（如 Cursor 与 AI gateway）的用量分散，缺少按人/组的统一账本，往往要等账单才知道花了多少。",
+      "负责。独立搭建统一成本治理平台：同步与邮箱/分组归因（8 组，131 + 108 人）、排名与下钻、Docker 部署，以及飞书每日排名与消费门槛告警。",
+      "难点。把异构 API 收敛到同一套归因口径——包括把 Cursor 的账期累计消费，在账期切换、负向修正与离职成员等边界下，还原成可信的按日序列。",
+      "结果。一个视图里按人/组治理 AI 花费，配合去重告警与早间排名卡片——而不是跨工具事后扒表。",
+    ],
+    work_cursor_note: "源码属公司资产，不公开。脱敏 Skill（仅方法与清单）即将推出。",
     work_dm3_agents_title: "DM3 多智能体平台",
     work_dm3_agents:
       "面向飞书的生产级多智能体助手：以 LangGraph / DeepAgents 编排路由与领域子智能体，角色授权、流式交互卡片与稳健异步 Worker——支撑数千条生产 trace，并保持高 LLM 调用成功率。",
