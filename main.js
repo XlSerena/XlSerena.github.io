@@ -42,7 +42,7 @@ const copy = {
       "Concurrent chats would double-fire tools and stall cards; dirty upstream payloads and four role scopes made “just call the API” unsafe. Separated short LLM summaries from detailed card/spreadsheet outputs so the bot stayed useful under load instead of dumping tables into chat—or failing silently.",
     work_agents_result_label: "Result.",
     work_agents_result:
-      "Live for four user types: 4,000+ production traces in 30 days, peaking at 327/day, with a 100% LLM-call success rate in the latest seven-day window.",
+      "Live for four user types: 4,000+ production traces in 30 days, peaking at 327/day, with a 100% LLM-call success rate.",
     work_costlens_sub: "Vibe-coding AI spend, one ledger across every entry point.",
     work_cursor_problem_label: "Problem.",
     work_cursor_problem:
@@ -139,7 +139,7 @@ const copy = {
       "并发会话会让工具双发、卡片卡住；上游脏数据加上四种角色数据范围，不能「直接调 API」。把简短 LLM 摘要与明细卡片/表格输出拆开，让机器人在压力下仍可用，而不是把大表塞进对话——或静默失败。",
     work_agents_result_label: "结果。",
     work_agents_result:
-      "上线服务四类用户：30 天内 4,000+ 条生产 trace，峰值 327 条/天；最近 7 天 LLM 调用成功率 100%。",
+      "上线服务四类用户：30 天内 4,000+ 条生产 trace，峰值 327 条/天；LLM 调用成功率 100%。",
     work_costlens_sub: "Vibe coding 的 AI 花销 · 跨入口统一台账。",
     work_cursor_problem_label: "问题。",
     work_cursor_problem:
