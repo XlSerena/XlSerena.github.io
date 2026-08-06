@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <link rel="stylesheet" href="styles.css?v=20260806-10" />
+    <link rel="stylesheet" href="styles.css?v=20260806-11" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -151,42 +151,11 @@
             <p class="piece-sub" data-i18n="work_costlens_sub">
               Vibe-coding AI spend, one ledger across every entry point.
             </p>
-            <div class="case-body">
-              <p class="case-block">
-                <strong data-i18n="work_cursor_problem_label">Problem.</strong>
-                <span data-i18n="work_cursor_problem">
-                  Vibe coding made AI spend grow fast and hard to govern: usage was scattered across tools
-                  and gateways, so leads lacked one trustworthy view of who used what—by person and team—before
-                  costs piled up.
-                </span>
-              </p>
-              <p class="case-block">
-                <strong data-i18n="work_cursor_owned_label">What I owned.</strong>
-                <span data-i18n="work_cursor_owned">
-                  Independently built a unified cost-governance platform across those entry points: API
-                  ingestion, identity/group mapping for 8 groups, totaling 240 people, rankings and
-                  drill-downs, Docker deploy, plus Lark bots for daily rankings and threshold alerts.
-                </span>
-              </p>
-              <p class="case-block">
-                <strong data-i18n="work_cursor_hard_label">Hard part.</strong>
-                <span data-i18n="work_cursor_hard">
-                  Vendor APIs often expose cycle-to-date spend, not daily dollars—so same-cycle snapshots and
-                  diffs had to produce a reliable daily series, while usage from other entry points was
-                  normalized into the same attribution model. Billing rollovers, negative adjustments,
-                  departed users, and dual API schemas were handled so the ledger didn’t invent fake days or
-                  false cycle breaks.
-                </span>
-              </p>
-              <p class="case-block">
-                <strong data-i18n="work_cursor_result_label">Result.</strong>
-                <span data-i18n="work_cursor_result">
-                  One place to attribute AI usage and cost by person and group, with deduped threshold alerts
-                  and a morning ranking card—governance instead of spreadsheet archaeology across tools.
-                  Source stays private; a sanitized Skill (patterns only) is forthcoming.
-                </span>
-              </p>
-            </div>
+            <p class="piece-blurb" data-i18n="work_costlens_blurb">
+              Independently built unified spend governance across AI entry points for 8 groups / 240 people:
+              ingestion, attribution, rankings, and Lark alerts—including trustworthy daily series from
+              cycle-total-only vendor APIs. Source private; sanitized Skill forthcoming.
+            </p>
           </article>
 
           <article class="piece">
@@ -198,40 +167,11 @@
             <p class="piece-sub" data-i18n="work_wide_sub">
               Data Engineer Intern · unblocking the offline risk chain.
             </p>
-            <div class="case-body">
-              <p class="case-block">
-                <strong data-i18n="work_agents_problem_label">Problem.</strong>
-                <span data-i18n="work_wide_problem">
-                  Payment-order decision wide tables sat under ~80% of risk-domain jobs. At 70–90 TB / ~12B
-                  rows a day they took 5–7 hours, so leaf tasks could not defend SLA no matter how the queue
-                  was tuned.
-                </span>
-              </p>
-              <p class="case-block">
-                <strong data-i18n="work_agents_owned_label">What I owned.</strong>
-                <span data-i18n="work_wide_owned">
-                  Owned the wide-table rebuild for the heaviest rooms (VA/SG first): skew cleanup, common-layer
-                  sink for shared REP dedupe, join-order fixes for oversized params/factors, and a 62-day
-                  hot/cold split grounded in lock/chargeback business rules.
-                </span>
-              </p>
-              <p class="case-block">
-                <strong data-i18n="work_agents_hard_label">Hard part.</strong>
-                <span data-i18n="work_wide_hard">
-                  Tables were full DF rebuilds—null transaction_id skew (~200M rows) showed up as one Spark
-                  stage with a long tail. Hot/cold had to write one physical table via external paths, and Hive
-                  metadata had to refresh atomically so Sensor dependents never scheduled on a cold-only half
-                  partition.
-                </span>
-              </p>
-              <p class="case-block">
-                <strong data-i18n="work_agents_result_label">Result.</strong>
-                <span data-i18n="work_wide_result">
-                  Runtime fell ~6h→2h (VA) and ~4h→1.5h (SG), advancing risk-domain SLA by ~3h; hot-only reads
-                  cut query time ~16→10 min (~37%).
-                </span>
-              </p>
-            </div>
+            <p class="piece-blurb" data-i18n="work_wide_blurb">
+              Rebuilt 70–90 TB / ~12B-row payment decision wide tables that ~80% of risk jobs depended on:
+              skew fixes, common-layer sink, and 62-day hot/cold split. Cut runtime ~6h→2h (VA) and ~4h→1.5h
+              (SG); hot-only reads ~16→10 min (~37%).
+            </p>
           </article>
 
           <article class="piece">
@@ -243,39 +183,10 @@
             <p class="piece-sub" data-i18n="work_rt_sub">
               Data Engineer Intern · Flink sensing for live abuse.
             </p>
-            <div class="case-body">
-              <p class="case-block">
-                <strong data-i18n="work_agents_problem_label">Problem.</strong>
-                <span data-i18n="work_rt_problem">
-                  As ecommerce opened new markets, abuse probed strategy gaps faster than hour-batch sensing
-                  could answer. Offline hour tables looked “hourly” but often lagged ~3–6 hours under yarn
-                  queues and multi-layer warehouse hops—too late for stolen-card, ATO, and collusion fight.
-                </span>
-              </p>
-              <p class="case-block">
-                <strong data-i18n="work_agents_owned_label">What I owned.</strong>
-                <span data-i18n="work_rt_owned">
-                  Built Flink real-time fact datasets (rule/item grain) joined to request/result dims, plus
-                  offline compensation for history backfill, and operational monitors on failover, lag, and
-                  checkpoint health.
-                </span>
-              </p>
-              <p class="case-block">
-                <strong data-i18n="work_agents_hard_label">Hard part.</strong>
-                <span data-i18n="work_rt_hard">
-                  Real-time paths fail quietly under burst lag or checkpoint loss; paired runtime alerts with
-                  later offline/online consistency checks so missing or duplicated rows could be caught before
-                  the board lied.
-                </span>
-              </p>
-              <p class="case-block">
-                <strong data-i18n="work_agents_result_label">Result.</strong>
-                <span data-i18n="work_rt_result">
-                  Moved key risk sensing from ~h+6 hour tables to near real time for stolen-card,
-                  account-takeover, and buyer–seller collusion scenes.
-                </span>
-              </p>
-            </div>
+            <p class="piece-blurb" data-i18n="work_rt_blurb">
+              Built Flink real-time risk datasets with offline compensation and lag/failover/checkpoint
+              monitors, moving stolen-card, ATO, and collusion sensing from ~h+6 hour tables to near real time.
+            </p>
           </article>
           </div>
         </div>
@@ -416,6 +327,6 @@
       <p data-i18n="footer">Quiet systems. Clear signals.</p>
     </footer>
 
-    <script src="main.js?v=20260806-10"></script>
+    <script src="main.js?v=20260806-11"></script>
   </body>
 </html>

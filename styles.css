@@ -416,6 +416,14 @@ a {
   color: var(--pine-deep);
 }
 
+.piece-blurb {
+  grid-column: 1;
+  margin: 0.15rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
 .piece--feature .piece-sub {
   grid-column: 2;
   margin: -0.15rem 0 0.15rem;
@@ -862,6 +870,7 @@ body.modal-open {
   .piece--feature h3,
   .piece-sub,
   .piece--feature .piece-sub,
+  .piece-blurb,
   .piece p,
   .piece--feature p,
   .case-body,

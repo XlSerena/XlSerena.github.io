@@ -43,38 +43,16 @@ const copy = {
     work_agents_result:
       "Live for four user types: 4,000+ production traces in 30 days, peaking at 327/day, with a 100% LLM-call success rate.",
     work_costlens_sub: "Vibe-coding AI spend, one ledger across every entry point.",
-    work_cursor_problem_label: "Problem.",
-    work_cursor_problem:
-      "Vibe coding made AI spend grow fast and hard to govern: usage was scattered across tools and gateways, so leads lacked one trustworthy view of who used what—by person and team—before costs piled up.",
-    work_cursor_owned_label: "What I owned.",
-    work_cursor_owned:
-      "Independently built a unified cost-governance platform across those entry points: API ingestion, identity/group mapping for 8 groups, totaling 240 people, rankings and drill-downs, Docker deploy, plus Lark bots for daily rankings and threshold alerts.",
-    work_cursor_hard_label: "Hard part.",
-    work_cursor_hard:
-      "Vendor APIs often expose cycle-to-date spend, not daily dollars—so same-cycle snapshots and diffs had to produce a reliable daily series, while usage from other entry points was normalized into the same attribution model. Billing rollovers, negative adjustments, departed users, and dual API schemas were handled so the ledger didn’t invent fake days or false cycle breaks.",
-    work_cursor_result_label: "Result.",
-    work_cursor_result:
-      "One place to attribute AI usage and cost by person and group, with deduped threshold alerts and a morning ranking card—governance instead of spreadsheet archaeology across tools. Source stays private; a sanitized Skill (patterns only) is forthcoming.",
+    work_costlens_blurb:
+      "Independently built unified spend governance across AI entry points for 8 groups / 240 people: ingestion, attribution, rankings, and Lark alerts—including trustworthy daily series from cycle-total-only vendor APIs. Source private; sanitized Skill forthcoming.",
     work_wide_title: "TikTok · Decision Wide Tables",
     work_wide_sub: "Data Engineer Intern · unblocking the offline risk chain.",
-    work_wide_problem:
-      "Payment-order decision wide tables sat under ~80% of risk-domain jobs. At 70–90 TB / ~12B rows a day they took 5–7 hours, so leaf tasks could not defend SLA no matter how the queue was tuned.",
-    work_wide_owned:
-      "Owned the wide-table rebuild for the heaviest rooms (VA/SG first): skew cleanup, common-layer sink for shared REP dedupe, join-order fixes for oversized params/factors, and a 62-day hot/cold split grounded in lock/chargeback business rules.",
-    work_wide_hard:
-      "Tables were full DF rebuilds—null transaction_id skew (~200M rows) showed up as one Spark stage with a long tail. Hot/cold had to write one physical table via external paths, and Hive metadata had to refresh atomically so Sensor dependents never scheduled on a cold-only half partition.",
-    work_wide_result:
-      "Runtime fell ~6h→2h (VA) and ~4h→1.5h (SG), advancing risk-domain SLA by ~3h; hot-only reads cut query time ~16→10 min (~37%).",
+    work_wide_blurb:
+      "Rebuilt 70–90 TB / ~12B-row payment decision wide tables that ~80% of risk jobs depended on: skew fixes, common-layer sink, and 62-day hot/cold split. Cut runtime ~6h→2h (VA) and ~4h→1.5h (SG); hot-only reads ~16→10 min (~37%).",
     work_rt_title: "TikTok · Real-Time Risk Datasets",
     work_rt_sub: "Data Engineer Intern · Flink sensing for live abuse.",
-    work_rt_problem:
-      "As ecommerce opened new markets, abuse probed strategy gaps faster than hour-batch sensing could answer. Offline hour tables looked “hourly” but often lagged ~3–6 hours under yarn queues and multi-layer warehouse hops—too late for stolen-card, ATO, and collusion fight.",
-    work_rt_owned:
-      "Built Flink real-time fact datasets (rule/item grain) joined to request/result dims, plus offline compensation for history backfill, and operational monitors on failover, lag, and checkpoint health.",
-    work_rt_hard:
-      "Real-time paths fail quietly under burst lag or checkpoint loss; paired runtime alerts with later offline/online consistency checks so missing or duplicated rows could be caught before the board lied.",
-    work_rt_result:
-      "Moved key risk sensing from ~h+6 hour tables to near real time for stolen-card, account-takeover, and buyer–seller collusion scenes.",
+    work_rt_blurb:
+      "Built Flink real-time risk datasets with offline compensation and lag/failover/checkpoint monitors, moving stolen-card, ATO, and collusion sensing from ~h+6 hour tables to near real time.",
     side_kicker: "Side notes",
     side_title: "Smaller experiments worth keeping.",
     side_lede: "Games, XR, and playful systems at the edge of design and tech.",
@@ -153,38 +131,16 @@ const copy = {
     work_agents_result:
       "上线服务四类用户：30 天内 4,000+ 条生产 trace，峰值 327 条/天；LLM 调用成功率 100%。",
     work_costlens_sub: "Vibe coding 的 AI 花销 · 跨入口统一台账。",
-    work_cursor_problem_label: "问题。",
-    work_cursor_problem:
-      "Vibe coding 让 AI 花销涨得快、却难治理：用量散落在不同工具与中转入口，负责人缺少按人/组看清「谁用了什么」的可信视图，成本往往堆到账单才暴露。",
-    work_cursor_owned_label: "我负责。",
-    work_cursor_owned:
-      "独立搭建覆盖上述入口的统一成本治理平台：API 同步、邮箱/分组归因（8 组，共计 240 人）、排名与下钻、Docker 部署，以及飞书每日排名与消费门槛告警。",
-    work_cursor_hard_label: "难点。",
-    work_cursor_hard:
-      "厂商 API 往往只给账期累计、没有按日美元，需用同账期快照做差还原可信日序列，并把其他入口的用量纳入同一套归因口径；同时正确处理账期切换、负向修正、离职成员与双 schema，避免假日期或误判新账期。",
-    work_cursor_result_label: "结果。",
-    work_cursor_result:
-      "一个视图里按人/组归因各 AI 入口的用量与成本，配合去重门槛告警与早间排名卡片——用系统做治理，而不是跨工具扒表。源码属公司资产；脱敏 Skill（仅方法）即将公开。",
+    work_costlens_blurb:
+      "独立搭建跨 AI 入口的统一成本治理，覆盖 8 组 / 240 人：同步、归因、排名与飞书告警，并在厂商仅提供账期累计时还原可信日序列。源码不公开；脱敏 Skill 即将发布。",
     work_wide_title: "TikTok · 决策大宽表优化",
     work_wide_sub: "数据工程实习 · 打通离线风控链路卡点。",
-    work_wide_problem:
-      "支付订单决策宽表支撑约八成风控域任务，日数据约 70–90 TB / 120 亿行，生产常耗 5–7 小时，叶子任务再怎么抢队列也保不住 SLA。",
-    work_wide_owned:
-      "负责最重机房（优先 VA/SG）的宽表改造：倾斜治理、REP 去重公共层下沉、大字段关联顺序调整，以及基于锁单/chargeback 业务规则的 62 天冷热分离。",
-    work_wide_hard:
-      "表是全量 DF——transaction_id 空值倾斜约 2 亿行，在 Spark UI 上表现为 stage 长尾。冷热要以外部表同 HDFS 路径落成一张物理表，且 Hive 元数据原子回刷，避免 Sensor 下游在「只有冷分区」时提前调度。",
-    work_wide_result:
-      "VA 约 6h→2h、SG 约 4h→1.5h，带动风控域 SLA 提前约 3h；只读热分区时取数约 16→10 分钟（~37%）。",
+    work_wide_blurb:
+      "改造约八成风控任务依赖的支付决策宽表（70–90 TB / ~120 亿行）：倾斜治理、公共层下沉、62 天冷热分离。VA 约 6h→2h、SG 约 4h→1.5h；热分区取数约 16→10 分钟（~37%）。",
     work_rt_title: "TikTok · 实时风险数据集",
     work_rt_sub: "数据工程实习 · Flink 对抗进行中的滥用。",
-    work_rt_problem:
-      "电商开国后，黑产试探策略漏洞的速度超过小时批感知。离线小时表名义「小时」，在队列与多层数仓下常延迟约 3–6 小时，跟不上盗卡、ATO、买卖勾结的对抗节奏。",
-    work_rt_owned:
-      "搭建 Flink 实时事实集（规则/商品粒度）并关联请求与结果维表，辅以离线补偿回补历史，配置 failover / lag / checkpoint 监控。",
-    work_rt_hard:
-      "实时链路会在堆积或 checkpoint 失败时静默劣化；用运行告警，并补离在线一致性核对，避免看板漏数/重数而不自知。",
-    work_rt_result:
-      "关键风险感知从小时表约 h+6 做到近实时，支撑盗卡、账户接管、BC 勾结等场景的实时对抗。",
+    work_rt_blurb:
+      "搭建 Flink 实时风险数据集，配合离线补偿与 lag/failover/checkpoint 监控，将盗卡、ATO、勾结等感知从小时表约 h+6 做到近实时。",
     side_kicker: "旁支",
     side_title: "值得留下的小实验。",
     side_lede: "游戏、XR 与可玩系统，落在设计与科技的交界。",
