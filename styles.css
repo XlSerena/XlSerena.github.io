@@ -780,7 +780,8 @@ body.modal-open {
   }
 
   .piece h3,
-  .piece p {
+  .piece p,
+  .case-beats {
     grid-column: 1;
   }
 }
