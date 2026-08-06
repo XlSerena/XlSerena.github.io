@@ -29,17 +29,17 @@ const copy = {
     tag_work: "Work",
     tag_personal: "Personal",
     tag_soon: "Soon",
-    work_agents_title: "Lark Multi-Agent Assistant",
-    work_agents_sub: "Production agents for annotation, QC, and ops queries.",
+    work_agents_title: "Production Multi-Agent Stack",
+    work_agents_sub: "Router, tools, and async delivery for annotation, QC, and ops.",
     work_agents_problem_label: "Problem.",
     work_agents_problem:
-      "Annotation, QC, and ops teams needed answers from internal systems inside Lark—without waiting on engineers, and without exposing the wrong person’s data to the wrong role.",
+      "Annotation, QC, and ops teams needed reliable answers from internal systems in chat—without waiting on engineers, and without exposing the wrong person’s data to the wrong role.",
     work_agents_owned_label: "What I owned.",
     work_agents_owned:
-      "Built core pieces of the production agent stack: LangGraph router and domain sub-agents, 40+ tools with role checks at graph build and tool run, plus the async path from Lark events through workers to streaming cards (Redis locks, rate limits, retries).",
+      "Independently built the full production stack: LangGraph / DeepAgents router and domain sub-agents, 40+ tools with role checks at graph build and tool run, FastAPI services, Taskiq workers, Redis locks/rate limits/retries, MySQL checkpoints, and streaming interactive cards as the delivery surface.",
     work_agents_hard_label: "Hard part.",
     work_agents_hard:
-      "Concurrent chats would double-fire tools and stall cards; dirty upstream payloads and four role scopes made “just call the API” unsafe. Separated short LLM summaries from detailed card/spreadsheet outputs so the bot stayed useful under load instead of dumping tables into chat—or failing silently.",
+      "Concurrent chats would double-fire tools and stall cards; dirty upstream payloads and four role scopes made “just call the API” unsafe. Separated short LLM summaries from detailed card/spreadsheet outputs so the runtime stayed useful under load instead of dumping tables into chat—or failing silently.",
     work_agents_result_label: "Result.",
     work_agents_result:
       "Live for four user types: 4,000+ production traces in 30 days, peaking at 327/day, with a 100% LLM-call success rate.",
@@ -126,17 +126,17 @@ const copy = {
     tag_work: "工作",
     tag_personal: "个人",
     tag_soon: "即将",
-    work_agents_title: "飞书生产多智能体",
-    work_agents_sub: "服务标注、质检与业务查询。",
+    work_agents_title: "Production Multi-Agent Stack",
+    work_agents_sub: "路由、工具与异步投递，服务标注 / 质检 / 运营。",
     work_agents_problem_label: "问题。",
     work_agents_problem:
-      "标注、质检与运营需要在飞书里直接查内部系统——不能事事找工程师，也不能把不该看的数据交给错误角色。",
+      "标注、质检与运营需要在对话里可靠查询内部系统——不能事事找工程师，也不能把不该看的数据交给错误角色。",
     work_agents_owned_label: "我负责。",
     work_agents_owned:
-      "搭建生产 agent 栈的核心部分：LangGraph 路由与领域子智能体、40+ 工具（图构建与工具执行两层鉴权），以及飞书事件 → Worker → 流式卡片的异步链路（Redis 锁、限流、重试）。",
+      "独立完成整套生产栈：LangGraph / DeepAgents 路由与领域子智能体、40+ 工具（图构建与工具执行两层鉴权）、FastAPI 服务、Taskiq Worker、Redis 锁/限流/重试、MySQL checkpoint，以及流式交互卡片作为投递面。",
     work_agents_hard_label: "难点。",
     work_agents_hard:
-      "并发会话会让工具双发、卡片卡住；上游脏数据加上四种角色数据范围，不能「直接调 API」。把简短 LLM 摘要与明细卡片/表格输出拆开，让机器人在压力下仍可用，而不是把大表塞进对话——或静默失败。",
+      "并发会话会让工具双发、卡片卡住；上游脏数据加上四种角色数据范围，不能「直接调 API」。把简短 LLM 摘要与明细卡片/表格输出拆开，让 runtime 在压力下仍可用，而不是把大表塞进对话——或静默失败。",
     work_agents_result_label: "结果。",
     work_agents_result:
       "上线服务四类用户：30 天内 4,000+ 条生产 trace，峰值 327 条/天；LLM 调用成功率 100%。",

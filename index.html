@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <link rel="stylesheet" href="styles.css?v=20260806-4" />
+    <link rel="stylesheet" href="styles.css?v=20260806-5" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -100,24 +100,25 @@
               <span class="piece-index">01</span>
               <span class="piece-tag" data-i18n="tag_case">Case study</span>
             </div>
-            <h3 data-i18n="work_agents_title">Lark Multi-Agent Assistant</h3>
+            <h3 data-i18n="work_agents_title">Production Multi-Agent Stack</h3>
             <p class="piece-sub" data-i18n="work_agents_sub">
-              Production agents for annotation, QC, and ops queries.
+              Router, tools, and async delivery for annotation, QC, and ops.
             </p>
             <div class="case-body">
               <p class="case-block">
                 <strong data-i18n="work_agents_problem_label">Problem.</strong>
                 <span data-i18n="work_agents_problem">
-                  Annotation, QC, and ops teams needed answers from internal systems inside Lark—without
+                  Annotation, QC, and ops teams needed reliable answers from internal systems in chat—without
                   waiting on engineers, and without exposing the wrong person’s data to the wrong role.
                 </span>
               </p>
               <p class="case-block">
                 <strong data-i18n="work_agents_owned_label">What I owned.</strong>
                 <span data-i18n="work_agents_owned">
-                  Built core pieces of the production agent stack: LangGraph router and domain sub-agents,
-                  40+ tools with role checks at graph build and tool run, plus the async path from Lark
-                  events through workers to streaming cards (Redis locks, rate limits, retries).
+                  Independently built the full production stack: LangGraph / DeepAgents router and domain
+                  sub-agents, 40+ tools with role checks at graph build and tool run, FastAPI services,
+                  Taskiq workers, Redis locks/rate limits/retries, MySQL checkpoints, and streaming
+                  interactive cards as the delivery surface.
                 </span>
               </p>
               <p class="case-block">
@@ -125,7 +126,7 @@
                 <span data-i18n="work_agents_hard">
                   Concurrent chats would double-fire tools and stall cards; dirty upstream payloads and
                   four role scopes made “just call the API” unsafe. Separated short LLM summaries from
-                  detailed card/spreadsheet outputs so the bot stayed useful under load instead of dumping
+                  detailed card/spreadsheet outputs so the runtime stayed useful under load instead of dumping
                   tables into chat—or failing silently.
                 </span>
               </p>
@@ -347,6 +348,6 @@
       <p data-i18n="footer">Quiet systems. Clear signals.</p>
     </footer>
 
-    <script src="main.js?v=20260806-4"></script>
+    <script src="main.js?v=20260806-5"></script>
   </body>
 </html>
