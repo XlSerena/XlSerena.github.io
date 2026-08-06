@@ -67,7 +67,7 @@ const copy = {
     skills_lede: "Method and checklists distilled from production work.",
     skill_tools_title: "agent-tool-safety",
     skill_tools_blurb:
-      "Design and review production tool-calling under roles, concurrency, and dirty upstream data—dual-layer auth, idempotency, and summary vs detailed delivery.",
+      "Five installable skills: dual-layer authz, idempotency, dirty-payload guards, summary vs detail delivery, and a full review pass. npx skills add XlSerena/agent-tool-safety",
     skill_spend_title: "ai-spend-governance",
     skill_spend_blurb:
       "Build a trustworthy AI / vibe-coding spend ledger across vendor entry points—attribution, daily series from cycle totals, rankings, and deduplicated alerts.",
@@ -170,7 +170,7 @@ const copy = {
     skills_lede: "从生产实践提炼的方法与清单。",
     skill_tools_title: "agent-tool-safety",
     skill_tools_blurb:
-      "设计和评审生产级 tool-calling：角色鉴权、并发幂等、脏上游校验，以及摘要与明细投递的分级输出。",
+      "五个可安装 skill：双层鉴权、幂等、脏上游校验、摘要/明细分流与端到端评审。npx skills add XlSerena/agent-tool-safety",
     skill_spend_title: "ai-spend-governance",
     skill_spend_blurb:
       "搭建可信的 AI / vibe-coding 花销台账：跨入口归因、从账期累计还原日序列、排名与去重告警。",
