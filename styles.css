@@ -319,6 +319,12 @@ a {
   border-bottom: 1px solid var(--line);
 }
 
+.about-list strong {
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--ink);
+}
+
 .about-list li:first-child {
   padding-top: 0;
 }

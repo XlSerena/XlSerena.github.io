@@ -18,10 +18,10 @@ const copy = {
     about_body:
       "I work where language models meet durable infrastructure—routing agents across tools, shaping trustworthy data paths, and making AI cost observable. AI Platform & Infrastructure Engineer at Noematrix (Flexiv Robotics); previously Data Engineer Intern at TikTok. M.S. Information (Big Data Analytics), University of Michigan; B.Eng. ECE, Shanghai Jiao Tong University.",
     about_list: [
-      "Agents · LangGraph · FastAPI · async workers",
-      "Data · warehouses · streaming · serving",
-      "Delivery · Docker · Kubernetes · CI/CD",
-      "Cost & tooling · spend governance · developer platforms",
+      { lead: "Agents", rest: "LangGraph · FastAPI · async workers" },
+      { lead: "Data", rest: "warehouses · streaming · serving" },
+      { lead: "Delivery", rest: "Docker · Kubernetes · CI/CD" },
+      { lead: "Cost & tooling", rest: "spend governance · developer platforms" },
     ],
     work_kicker: "Selected work",
     work_title: "A few things worth showing.",
@@ -107,10 +107,10 @@ const copy = {
     about_body:
       "我在大模型与可靠基础设施的交界处工作——编排智能体工具调用、塑造可信数据路径，并让 AI 成本可观测、可治理。现任 Noematrix（Flexiv Robotics）AI 平台与基础设施工程师；曾于 TikTok 任数据工程实习生。密歇根大学信息学院硕士（大数据分析）；上海交通大学电子与计算机工程学士。",
     about_list: [
-      "Agents · LangGraph · FastAPI · 异步 Worker",
-      "Data · 数仓 · 流式 · 服务层",
-      "Delivery · Docker · Kubernetes · CI/CD",
-      "Cost & tooling · 花销治理 · 研发工具平台",
+      { lead: "Agents", rest: "LangGraph · FastAPI · 异步 Worker" },
+      { lead: "Data", rest: "数仓 · 流式 · 服务层" },
+      { lead: "Delivery", rest: "Docker · Kubernetes · CI/CD" },
+      { lead: "Cost & tooling", rest: "花销治理 · 研发工具平台" },
     ],
     work_kicker: "精选作品",
     work_title: "几件值得拿出来看的事。",
@@ -215,7 +215,15 @@ function applyLang(lang) {
     const key = el.getAttribute("data-i18n-list");
     const items = dict[key];
     if (!Array.isArray(items)) return;
-    el.innerHTML = items.map((t) => `<li>${t}</li>`).join("");
+    el.innerHTML = items
+      .map((item) => {
+        if (item && typeof item === "object" && item.lead != null) {
+          const rest = item.rest ? ` · ${item.rest}` : "";
+          return `<li><strong>${item.lead}</strong>${rest}</li>`;
+        }
+        return `<li>${item}</li>`;
+      })
+      .join("");
   });
 
   document.querySelectorAll(".lang-btn").forEach((btn) => {
