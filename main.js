@@ -66,7 +66,8 @@ const copy = {
     open_title: "Skills and peripherals.",
     open_lede: "Installable agent skills and small services distilled from production.",
     open_quota_title: "sub2api-lark-quota",
-    open_quota_blurb: "Lark approval → Sub2API auto-deposit peripheral service.",
+    open_quota_blurb:
+      "An ecosystem peripheral for open-source Sub2API — Lark/Feishu request & approval → auto deposit.",
     skill_tools_title: "agent-tool-safety",
     skill_tools_blurb:
       "Five installable skills: dual-layer authz, idempotency, dirty-payload guards, summary vs detail delivery, and a full review pass. npx skills add XlSerena/agent-tool-safety",
@@ -171,7 +172,7 @@ const copy = {
     open_title: "Skills 与周边服务。",
     open_lede: "从生产实践提炼的可安装 Skills，以及可自行部署的周边服务。",
     open_quota_title: "sub2api-lark-quota",
-    open_quota_blurb: "飞书审批 → Sub2API 自动入账的周边服务。",
+    open_quota_blurb: "为开源 Sub2API 补的一块生态周边：飞书提额与审批 → 自动入账。",
     skill_tools_title: "agent-tool-safety",
     skill_tools_blurb:
       "五个可安装 skill：双层鉴权、幂等、脏上游校验、摘要/明细分流与端到端评审。npx skills add XlSerena/agent-tool-safety",
