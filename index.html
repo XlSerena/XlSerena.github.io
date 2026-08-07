@@ -33,7 +33,7 @@
       rel="stylesheet"
     />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <link rel="stylesheet" href="styles.css?v=20260806-24" />
+    <link rel="stylesheet" href="styles.css?v=20260807-1" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -43,7 +43,7 @@
       <nav class="nav" aria-label="Primary">
         <a href="#about" data-i18n="nav_about">About</a>
         <a href="#work" data-i18n="nav_work">Work</a>
-        <a href="#skills" data-i18n="nav_skills">Skills</a>
+        <a href="#open" data-i18n="nav_open">Open</a>
         <a href="#side" data-i18n="nav_side">Side notes</a>
         <a href="#contact" data-i18n="nav_contact">Contact</a>
       </nav>
@@ -237,14 +237,28 @@
         </div>
       </section>
 
-      <section class="panel skills" id="skills">
+      <section class="panel skills" id="open">
         <div class="panel-inner">
-          <p class="section-kicker" data-i18n="skills_kicker">Public skills</p>
-          <h2 data-i18n="skills_title">Agent skills you can load.</h2>
-          <p class="skills-lede" data-i18n="skills_lede">
-            Method and checklists distilled from production work.
+          <p class="section-kicker" data-i18n="open_kicker">Open work</p>
+          <h2 data-i18n="open_title">Skills and peripherals.</h2>
+          <p class="skills-lede" data-i18n="open_lede">
+            Installable agent skills and small services distilled from production.
           </p>
           <div class="skills-list">
+            <a
+              class="skill-item"
+              href="https://github.com/XlSerena/sub2api-lark-quota"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div class="skill-head">
+                <h3 data-i18n="open_quota_title">sub2api-lark-quota</h3>
+                <span class="skill-go" aria-hidden="true">↗</span>
+              </div>
+              <p class="skill-blurb" data-i18n="open_quota_blurb">
+                Lark approval → Sub2API auto-deposit peripheral service.
+              </p>
+            </a>
             <a
               class="skill-item"
               href="https://github.com/XlSerena/agent-tool-safety"
@@ -416,6 +430,6 @@
       <p data-i18n="footer">Quiet systems. Clear signals.</p>
     </footer>
 
-    <script src="main.js?v=20260806-25"></script>
+    <script src="main.js?v=20260807-1"></script>
   </body>
 </html>

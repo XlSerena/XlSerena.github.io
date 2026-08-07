@@ -540,10 +540,16 @@ a {
 
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   column-gap: clamp(1.5rem, 3vw, 2.75rem);
   margin-top: 1.25rem;
   border-top: 1px solid var(--line);
+}
+
+@media (max-width: 900px) {
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 .skill-item {
